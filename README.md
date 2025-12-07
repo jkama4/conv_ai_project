@@ -65,7 +65,7 @@ gcc --version
 ```
 
 ### Windows
-First, downlad an executable from [MSYS2](https://www.youtube.com/watch?v=c7FjV8Gwk_M&t=2s). 
+First, downlad an executable from [MSYS2](https://www.msys2.org/). 
 Go to the section "Installation", and follow the instructions there.
 
 # TODO LIST

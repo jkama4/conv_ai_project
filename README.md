@@ -67,6 +67,7 @@ gcc --version
 ### Windows
 First, downlad an executable from [MSYS2](https://www.msys2.org/). 
 Go to the section "Installation", and follow the instructions there.
+**NOTE:** depending on your architecture, select the x86_64, or the ARM64 one.
 
 # TODO LIST
 

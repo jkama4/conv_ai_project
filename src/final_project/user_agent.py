@@ -1,4 +1,3 @@
-from transformers import AutoTokenizer, AutoModelForCausalLM
 from llama_cpp import Llama
 
 from typing import Self, Dict, List

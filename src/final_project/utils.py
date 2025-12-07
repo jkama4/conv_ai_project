@@ -94,10 +94,19 @@ def get_knowledge_base(
 
 def get_history(
     ds: Dataset,
+    n: int,
 ) -> Dict:
     
-    
-    
+    history: List[Dict] = []
+
+    start = max(0, len(ds) - n)
+
+    for i in range(start, len(ds)):
+        sample = ds[i]["messages"]
+        dialogue = sample[:-1]
+        history.append(dialogue)
+
+    return history
 
 
 def create_datasets(

@@ -1,6 +1,7 @@
 # Environment Setup
 
-Before setting up, make sure Python 3.13 is installed.
+Before setting up, make sure Python 3.13 is installed. You also need a C++ compiler. To set that up, follow the final section.
+
 
 ## No Virtual env (pip)
 If you don't Poetry to manage dependencies, you can simply use the following command
@@ -38,7 +39,34 @@ Or on Windows
 
 ```bash
 poetry env activate
+# or alternatively:
+poetry shell
 ```
+
+## Setting up C++ compiler
+
+### Unix (macOS/Linux)
+For macOS, it is relatively simple, just run the following commands
+
+```bash
+xcode-select --install
+```
+
+Agree to install. Then, use
+
+```bash
+brew install gcc
+```
+
+When finished, confirm with
+
+```bash
+gcc --version
+```
+
+### Windows
+First, downlad an executable from [MSYS2](https://www.youtube.com/watch?v=c7FjV8Gwk_M&t=2s). 
+Go to the section "Installation", and follow the instructions there.
 
 # TODO LIST
 

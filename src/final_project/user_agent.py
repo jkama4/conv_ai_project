@@ -1,38 +1,40 @@
 from llama_cpp import Llama
+from typing import Self, List, Dict
 
-from typing import Self, Dict, List
+from . import constants
+
 
 class UserAgent:
 
-    def __init__(self: Self, persona: str) -> None:
+    def __init__(self: Self, persona: str):
         self.persona = persona
-        self.llm: Llama = Llama.from_pretrained(
-            repo_id="TheBloke/Mistral-7B-Instruct-v0.2-GGUF", 
-            filename="mistral-7b-instruct-v0.2.Q4_K_M.gguf"
+
+        self.llm = Llama.from_pretrained(
+            repo_id="TheBloke/Mistral-7B-Instruct-v0.2-GGUF",
+            filename="mistral-7b-instruct-v0.2.Q4_K_M.gguf",
+            n_ctx=4096,
+            n_gpu_layers=40,
         )
-    
+
     def _call(
         self: Self,
         history: List[Dict],
     ) -> str:
-        
-        system_msg = {
+
+        system_instruction = {
             "role": "system",
-            "content": (
-                "You are simulating a user (traveler) with the following personality:\n"
-                f"{self.persona}\n\n"
-                "Respond ONLY as the traveler. Do not take the role of an assistant."
-            )
+            "content": constants.NICE_USER_PERSONA
         }
 
-        messages = [system_msg] + history
+        messages = [system_instruction] + history
 
-        response: Dict = self.llm.create_chat_completion(
-            messages=messages
+        response = self.llm.create_chat_completion(
+            messages=messages,
+            temperature=0.7,
+            top_p=0.9,
+            max_tokens=200,
+            stream=False
         )
-        
-        msg: str = (
-            response["choices"][0]["message"]["content"]
-        ).strip()
 
+        msg = response["choices"][0]["message"]["content"].strip()
         return msg

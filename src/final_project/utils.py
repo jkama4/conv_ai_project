@@ -49,34 +49,40 @@ def format_dialogue(dialogue: List[Dict]) -> List[Dict]:
 
     messages.append({
         "role": "system",
-        "content": "You are a traveler expressing preferences to an assistant."
+        "content": "You are a helpful travel assistant."
     })
 
     for turn in dialogue:
         if turn["speaker"] == "U":
-            messages.append({"role": "system", "content": turn["text"]})
-        else:
+            messages.append({"role": "user", "content": turn["text"]})
+        elif turn["speaker"] == "S":
             messages.append({"role": "assistant", "content": turn["text"]})
+        else:
+            raise ValueError("Unknown speaker type")
 
     return messages
 
 
-def reformat_dataset(dataset, labels_dataset): 
-    reformatted_dataset = {
-        "messages": []
-    }
-    for sample_index in range(len(dataset)): 
-        # Your solution here
+
+def reformat_dataset(dataset, labels_dataset):
+    reformatted_dataset = {"messages": []}
+
+    for i in range(len(dataset)):
         try:
-            sample_dialogue = format_dialogue(dialogue=dataset[sample_index])
-            sample_response = labels_dataset[sample_index]["response"]
-            sample_dialogue.append({"role": "system", "content": sample_response})
-            
+            sample_dialogue = format_dialogue(dataset[i])
+
+            sample_dialogue.append({
+                "role": "assistant",
+                "content": labels_dataset[i]["response"]
+            })
+
             reformatted_dataset["messages"].append(sample_dialogue)
-        except Exception as e:
+
+        except Exception:
             continue
 
     return reformatted_dataset
+
 
 
 def get_knowledge_base(

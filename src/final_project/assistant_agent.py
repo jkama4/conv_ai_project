@@ -14,8 +14,8 @@ class BaseAssistantAgent:
     validation_ds: Dataset = config.VALIDATION_DS
     test_ds: Dataset = config.TEST_DS
 
-    def __init__(self: Self, cfg: models.UserAgentConfig | None = None) -> None:
-        self.cfg = cfg or models.UserAgentConfig()
+    def __init__(self: Self) -> None:
+        self.cfg = models.AssistantAgentConfig()
         self.tokenizer: AutoTokenizer = self.cfg._load_tokenizer()
         self.model: AutoModelForCausalLM = self.cfg._load_model()
         self.trainer: SFTTrainer | None = None
@@ -91,6 +91,12 @@ class RAGAssistantAgent(BaseAssistantAgent):
         return "\n".join(formatted)
 
     def _call(self: Self, history: List[Dict]) -> str:
+
+        if len(history) == 0 or history[0]["role"] != "system":
+            history = (
+                [{"role": "system", "content": "You are a helpful booking assistant."}]
+                + history
+        )
 
         last_user_msg = next(
             (m["content"] for m in reversed(history) if m["role"] == "user"),

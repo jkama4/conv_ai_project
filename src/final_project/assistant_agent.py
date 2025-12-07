@@ -36,8 +36,6 @@ class BaseAssistantAgent:
         return self.trainer.train()
 
     def _generate(self: Self, messages: List[Dict]) -> str:
-        """Shared generation utility (NO RAG IN THIS VERSION)."""
-
         text = self.tokenizer.apply_chat_template(
             messages,
             tokenize=False,
@@ -60,10 +58,6 @@ class BaseAssistantAgent:
         ).strip()
 
     def _call(self: Self, history: List[Dict]) -> str:
-        """
-        Base version: NO RAG.
-        Uses only the input history.
-        """
         return self._generate(history)
 
 

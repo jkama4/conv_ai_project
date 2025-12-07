@@ -4,10 +4,10 @@ import subprocess
 import shutil
 
 from datasets import Dataset
-
 from pathlib import Path
-
 from typing import Tuple, List, Dict
+
+from . import constants
 
 
 def pick_bf16():
@@ -48,8 +48,8 @@ def format_dialogue(dialogue: List[Dict]) -> List[Dict]:
     messages = []
 
     messages.append({
-        "role": "system",
-        "content": "You are a helpful travel assistant."
+        "role": "assistant",
+        "content": constants.ASSISTANT_INSTRUCTION_PROMPT,
     })
 
     for turn in dialogue:

@@ -9,6 +9,7 @@ from pathlib import Path
 
 from typing import Tuple, List, Dict
 
+
 def pick_bf16():
     if torch.cuda.is_available():
         major, _ = torch.cuda.get_device_capability()
@@ -53,7 +54,7 @@ def format_dialogue(dialogue: List[Dict]) -> List[Dict]:
 
     for turn in dialogue:
         if turn["speaker"] == "U":
-            messages.append({"role": "user", "content": turn["text"]})
+            messages.append({"role": "system", "content": turn["text"]})
         else:
             messages.append({"role": "assistant", "content": turn["text"]})
 
@@ -89,6 +90,14 @@ def get_knowledge_base(
         knowledge_base=json.load(f)
 
     return knowledge_base
+
+
+def get_history(
+    ds: Dataset,
+) -> Dict:
+    
+    
+    
 
 
 def create_datasets(

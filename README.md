@@ -39,3 +39,12 @@ Or on Windows
 ```bash
 poetry env activate
 ```
+
+# TODO LIST
+
+1. Nog een manier om te finetune assistant agent
+2. Geef 2 persona's aan de user agent
+3. Assistant consults knowledge base - how?
+4. Design 10 histories voor initialisation van convo - history geeft een context om mee/vanaf te werken
+5. Stop mechanism - stop wanner user agent satisfied is
+6. Evaluation - LLM-as-judge, Objective metrics (number of tokens, number of turns before completion, etc.)

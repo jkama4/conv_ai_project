@@ -1,7 +1,7 @@
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from llama_cpp import Llama
 
-from typing import Self, Dict
+from typing import Self, Dict, List
 
 class UserAgent:
 
@@ -14,19 +14,26 @@ class UserAgent:
     
     def _call(
         self: Self,
-        prompt: str,
+        history: List[Dict],
     ) -> str:
+        
+        system_msg = {
+            "role": "system",
+            "content": (
+                "You are simulating a user (traveler) with the following personality:\n"
+                f"{self.persona}\n\n"
+                "Respond ONLY as the traveler. Do not take the role of an assistant."
+            )
+        }
+
+        messages = [system_msg] + history
+
         response: Dict = self.llm.create_chat_completion(
-            messages=[
-                {
-                    "role": "user", 
-                    "content": prompt
-                }
-            ]
+            messages=messages
         )
         
         msg: str = (
             response["choices"][0]["message"]["content"]
-        )
+        ).strip()
 
         return msg

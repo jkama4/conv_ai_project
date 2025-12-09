@@ -1,0 +1,55 @@
+{
+  "metadata": {
+    "persona": "nice",
+    "assistant_type": "rag",
+    "dataset_index": 6,
+    "ground_truth": "All the reviews regarding noise at University Arms Hotel were negative. The reviews at Gonville Hotel were mixed with the room being described as both noisy and quiet. Would you prefer to book the Gonville Hotel?",
+    "predicted": "<think>\n\n</think>\n\nThe Gonville Hotel has a more noisy environment than the University Arms Hotel. Would you like to know more about either of them?"
+  },
+  "conversation": [
+    {
+      "content": "I am looking got a hotel near the centre and I need to it have free wifi.",
+      "role": "user"
+    },
+    {
+      "content": "I have 5 hotels that fit that criteria. Are you looking for a particular price range?",
+      "role": "assistant"
+    },
+    {
+      "content": "Expensive. A guest house, please.",
+      "role": "user"
+    },
+    {
+      "content": "I have no matches that fit that criteria, would you like me to look up something else?",
+      "role": "assistant"
+    },
+    {
+      "content": "How about one that is a hotel?",
+      "role": "user"
+    },
+    {
+      "content": "Yes, I have two results. Gonville hotel has 3 stars and University Arms has 4 stars, would one of those work for you?",
+      "role": "assistant"
+    },
+    {
+      "content": "Which one has the least noisy, disruptive environment?",
+      "role": "user"
+    },
+    {
+      "role": "assistant",
+      "content": "<think>\n\n</think>\n\nThe Gonville Hotel has a more noisy environment than the University Arms Hotel. Would you like to know more about either of them?"
+    },
+    {
+      "role": "user",
+      "content": "Thanks—that helps. Going back to what we discussed about noise, University Arms seems the quieter choice. Want me to check current room rates and availability at University Arms for your dates, or compare dining options nearby?"
+    },
+    {
+      "role": "assistant",
+      "content": "I will check that for you."
+    },
+    {
+      "role": "user",
+      "content": "Thank you—that would be great. Please pull current rates and availability for University Arms on the dates we discussed, and share any good nearby dining options for a quiet evening. <END> bye"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "metadata": {
+    "persona": "annoying",
+    "assistant_type": "base",
+    "dataset_index": 6,
+    "ground_truth": "All the reviews regarding noise at University Arms Hotel were negative. The reviews at Gonville Hotel were mixed with the room being described as both noisy and quiet. Would you prefer to book the Gonville Hotel?",
+    "predicted": "<think>\n\n</think>\n\nThe Gonville Hotel is considered to be a quieter place than the University Arms Hotel. Do you have any other questions?"
+  },
+  "conversation": [
+    {
+      "content": "I am looking got a hotel near the centre and I need to it have free wifi.",
+      "role": "user"
+    },
+    {
+      "content": "I have 5 hotels that fit that criteria. Are you looking for a particular price range?",
+      "role": "assistant"
+    },
+    {
+      "content": "Expensive. A guest house, please.",
+      "role": "user"
+    },
+    {
+      "content": "I have no matches that fit that criteria, would you like me to look up something else?",
+      "role": "assistant"
+    },
+    {
+      "content": "How about one that is a hotel?",
+      "role": "user"
+    },
+    {
+      "content": "Yes, I have two results. Gonville hotel has 3 stars and University Arms has 4 stars, would one of those work for you?",
+      "role": "assistant"
+    },
+    {
+      "content": "Which one has the least noisy, disruptive environment?",
+      "role": "user"
+    },
+    {
+      "role": "assistant",
+      "content": "<think>\n\n</think>\n\nThe Gonville Hotel is considered to be a quieter place than the University Arms Hotel. Do you have any other questions?"
+    },
+    {
+      "role": "user",
+      "content": "That won't work, I already told you I want a quiet guest house in the centre with free wifi.  \nThose two are hotels, not guest houses, so we went over this—where are the real guest house options?  \nCan you show me actual central guest houses with wifi that are quiet?"
+    },
+    {
+      "role": "assistant",
+      "content": "I'm sorry there are no guesthouses that fit your needs.  Would you like to try a different area or price range?"
+    },
+    {
+      "role": "user",
+      "content": "That won't work, I already told you I want a quiet central guest house with free wifi, not hotels. We went over this—either show me real central guest houses that meet those criteria, or admit there are none. If you can't, then I'm done; bye <END>"
+    }
+  ]
+}

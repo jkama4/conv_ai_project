@@ -1,0 +1,55 @@
+{
+  "metadata": {
+    "persona": "nice",
+    "assistant_type": "rag",
+    "dataset_index": 4,
+    "ground_truth": "Yes absolutely! The Ashley Hotel and the Lovell Lodge both have great views that will make your stay very relaxing.",
+    "predicted": "<think>\n\n</think>\n\nBoth the Ashley Hotel and the Lovell Lodge offer excellent views from the rooms. Would you like to book a room?"
+  },
+  "conversation": [
+    {
+      "content": "Hi! I am looking for a place to stay that has free wifi. The hotel doesn't have to have free parking but that would be nice.",
+      "role": "user"
+    },
+    {
+      "content": "There are many listings. Do you have an area or price range preference to further narrow down?",
+      "role": "assistant"
+    },
+    {
+      "content": "yes less than 100 a night",
+      "role": "user"
+    },
+    {
+      "content": "There are 29 hotels with those criteria. What location would you like it to be in?",
+      "role": "assistant"
+    },
+    {
+      "content": "I would like it to be in northern cambridge and have 2 stars.",
+      "role": "user"
+    },
+    {
+      "content": "There are two hotels that meet those criteria, the Ashley Hotel and the Lovell Lodge.",
+      "role": "assistant"
+    },
+    {
+      "content": "Give me a room at either hotel with a great view from the room.",
+      "role": "user"
+    },
+    {
+      "role": "assistant",
+      "content": "<think>\n\n</think>\n\nBoth the Ashley Hotel and the Lovell Lodge offer excellent views from the rooms. Would you like to book a room?"
+    },
+    {
+      "role": "user",
+      "content": "That sounds perfect—thank you. Going back to what we discussed, could you share your travel dates so I can check availability for a double room with the best view at the Ashley Hotel and Lovell Lodge and book the best option under £100?"
+    },
+    {
+      "role": "assistant",
+      "content": "How about the Ashley Hotel? It has a 2 star rating and is located in the north. It has free wifi and parking. It is moderately priced."
+    },
+    {
+      "role": "user",
+      "content": "That sounds perfect—thank you. I’ll check availability for a double room with the best view at the Ashley Hotel under £100, keeping Lovell Lodge as a backup. <END> bye"
+    }
+  ]
+}

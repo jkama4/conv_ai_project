@@ -1,40 +1,33 @@
-from llama_cpp import Llama
+import os
+
+from openai import OpenAI
+
 from typing import Self, List, Dict
 
 from . import constants
 
+OPENAI_CLIENT: OpenAI = OpenAI(api_key=os.getenv("OPENAI_API_KEY", ""))
 
 class UserAgent:
 
-    def __init__(self: Self, persona: str):
+    def __init__(self: Self, persona: str = "nice"):
+        self.model_name = "Qwen/Qwen2.5-7B"
         self.persona = persona
 
-        self.llm = Llama.from_pretrained(
-            repo_id="TheBloke/Mistral-7B-Instruct-v0.2-GGUF",
-            filename="mistral-7b-instruct-v0.2.Q4_K_M.gguf",
-            n_ctx=4096,
-            n_gpu_layers=40,
+    def _call(self: Self, history: List[Dict]):
+        
+        response = OPENAI_CLIENT.responses.create(
+            model="gpt-5-nano",
+            input=(
+                f"{constants.ANNOYING_USER_PERSONA if self.persona == "annoying" else constants.NICE_USER_PERSONA}\n\n"
+                "This is the conversation so far:\n\n"
+                f"{history}"
+                "It is your task to respond accordingly to the assistant's final message."
+                "Don\'t let the conversation go on for too long, and try to get to the point."
+                "Also, don't make your responses too long. Keep your responses around 2-3 sentences."
+                "Don't use excessive amounts of text for a simple task like this."
+                f"{constants.ANNOYING_INSTRUCTION if self.persona == "annoying" else constants.NICE_INSTRUCTION}"
+            )
         )
 
-    def _call(
-        self: Self,
-        history: List[Dict],
-    ) -> str:
-
-        system_instruction = {
-            "role": "system",
-            "content": constants.NICE_USER_PERSONA
-        }
-
-        messages = [system_instruction] + history
-
-        response = self.llm.create_chat_completion(
-            messages=messages,
-            temperature=0.7,
-            top_p=0.9,
-            max_tokens=200,
-            stream=False
-        )
-
-        msg = response["choices"][0]["message"]["content"].strip()
-        return msg
+        return response.output_text

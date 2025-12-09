@@ -2,6 +2,8 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 from peft import LoraConfig, get_peft_model, PeftModel, PeftMixedModel
 from trl import SFTTrainer, SFTConfig
 
+from pathlib import Path
+
 from datasets import Dataset
 
 from dataclasses import dataclass
@@ -26,7 +28,7 @@ class AssistantAgentConfig:
     def _load_tokenizer(self: Self) -> AutoTokenizer:
         return AutoTokenizer.from_pretrained(self.qwen_model, use_fast=True)
     
-    def _load_model(self: Self) -> PeftModel:
+    def _setup_peft_model(self: Self) -> PeftModel:
         base = AutoModelForCausalLM.from_pretrained(
             self.qwen_model,
             dtype="auto",

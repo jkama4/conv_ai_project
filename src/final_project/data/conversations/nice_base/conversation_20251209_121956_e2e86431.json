@@ -1,0 +1,47 @@
+{
+  "metadata": {
+    "persona": "nice",
+    "assistant_type": "base",
+    "dataset_index": 8,
+    "ground_truth": "Those that have dined previously at the La Raza restaurant regard its beer quality as being great and a highlight.",
+    "predicted": "<think>\n\n</think>\n\nThe La Raza gets some mixed reviews about their beers. Some people think the drinks are a good value and others say they are overpriced. Would you like me to find another place with better reviews?"
+  },
+  "conversation": [
+    {
+      "content": "I would like to find a cheap African restaurant in the area.",
+      "role": "user"
+    },
+    {
+      "content": "I was unable to find any cheap african places.",
+      "role": "assistant"
+    },
+    {
+      "content": "What cheap restaurants are in the centre?",
+      "role": "user"
+    },
+    {
+      "content": "We have fifteen cheap restaurants in the center, with cuisines ranging from asian oriental to mediterranean and modern european.",
+      "role": "assistant"
+    },
+    {
+      "content": "How about Spanish food. Do you have a restaurant serving that?",
+      "role": "user"
+    },
+    {
+      "content": "La Raza is a spanish restaurant in that price range, shall I book a table for you?",
+      "role": "assistant"
+    },
+    {
+      "content": "What do people say about the quality of beer served at La Raza?",
+      "role": "user"
+    },
+    {
+      "role": "assistant",
+      "content": "<think>\n\n</think>\n\nThe La Raza gets some mixed reviews about their beers. Some people think the drinks are a good value and others say they are overpriced. Would you like me to find another place with better reviews?"
+    },
+    {
+      "role": "user",
+      "content": "Thank you—that helps. Going back to what we discussed, I can shortlist alternative places with better beer reviews in the center. <END> bye"
+    }
+  ]
+}

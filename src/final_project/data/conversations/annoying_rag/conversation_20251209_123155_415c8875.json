@@ -1,0 +1,39 @@
+{
+  "metadata": {
+    "persona": "annoying",
+    "assistant_type": "rag",
+    "dataset_index": 9,
+    "ground_truth": "Frankie and Bennys is not in the best part of town, and the view from the restaurant is of a parking lot, but it is a 10 minute walk from other city sights.",
+    "predicted": "<think>\n\n</think>\n\nThe location is not great according to the majority of guests, but some guests did enjoy it. Would you like to know anything else?"
+  },
+  "conversation": [
+    {
+      "content": "Hello, I am looking for an expensive restaurant on the south side of town.",
+      "role": "user"
+    },
+    {
+      "content": "Frankie and Bennys serves Italian food, it is in the South Part of town, and the price range is expensive. Can I help you with anything else?",
+      "role": "assistant"
+    },
+    {
+      "content": "Is it in a good location to the sights?",
+      "role": "user"
+    },
+    {
+      "role": "assistant",
+      "content": "<think>\n\n</think>\n\nThe location is not great according to the majority of guests, but some guests did enjoy it. Would you like to know anything else?"
+    },
+    {
+      "role": "user",
+      "content": "That won't work for being near the sights, like I said before—the south side isn't convenient for the main attractions. We already went over this; do you want me to pull expensive restaurants in the central district near the landmarks, or should I look for hotels in that area instead?"
+    },
+    {
+      "role": "assistant",
+      "content": "I'm sorry I don't have any restaurants in the south area that are expensive. Would you like to try a different part of town or price range?"
+    },
+    {
+      "role": "user",
+      "content": "That won't work; I already told you the south side isn't convenient for the sights. We already went over this—I want expensive options in the central district near the landmarks, not more suggestions in the outskirts. If you can't pull central expensive restaurants or hotels, just say so and stop wasting my time, bye <END>"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "persona": "nice",
+    "assistant_type": "base",
+    "dataset_index": 10,
+    "ground_truth": "Alexander Bed and Brrakfast is located outside of town, whereas El Shaddai is in a centeral location and within walking distance of a lot of things.",
+    "predicted": "<think>\n\n</think>\n\nAlexander Bed and Breakfast is located in a good part of town, and El Shaddai is located in a safe area."
+  },
+  "conversation": [
+    {
+      "content": "I really would like to try a japanese restaurant while in Cambridge.",
+      "role": "user"
+    },
+    {
+      "content": "Wagamama is a Japanese restaurant on 36 Saint Andres Street. Would you like me to make a reservation for you?",
+      "role": "assistant"
+    },
+    {
+      "content": "I'd like to treat myself.  Is this in the expensive range?",
+      "role": "user"
+    },
+    {
+      "content": "It is expensive. Shall I book it for you?",
+      "role": "assistant"
+    },
+    {
+      "content": "Yes, if this restaurant is in the Centre. I also need the postcode and phone number please.",
+      "role": "user"
+    },
+    {
+      "content": "Of course. The phone is 01223462354 and the post code is cb23ar. Can I do anything else for you?",
+      "role": "assistant"
+    },
+    {
+      "content": "I also need a hotel in the cheap price range.",
+      "role": "user"
+    },
+    {
+      "content": "I have located 2 hotel options, Alexander Bed and Breakfast and El Shaddai, both have internet and parking available. Would you like me to book one of these for you?",
+      "role": "assistant"
+    },
+    {
+      "content": "Are these located in a good part of town?",
+      "role": "user"
+    },
+    {
+      "role": "assistant",
+      "content": "<think>\n\n</think>\n\nAlexander Bed and Breakfast is located in a good part of town, and El Shaddai is located in a safe area."
+    },
+    {
+      "role": "user",
+      "content": "I appreciate that—the Alexander Bed and Breakfast seems like a good fit in a nice area and is cheaper. Shall I go ahead and book it for your travel dates, or would you prefer El Shaddai?"
+    },
+    {
+      "role": "assistant",
+      "content": "I would definitely like to book the Alexander Bed and Breakfast for you.  How many nights and how many guests will you be needing?"
+    },
+    {
+      "role": "user",
+      "content": "Thanks—that sounds good. Two nights for two guests. I’ll go ahead and book Alexander Bed and Breakfast for you now. <END> bye"
+    }
+  ]
+}

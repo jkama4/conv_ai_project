@@ -1,23 +1,27 @@
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from datasets import Dataset
+from peft import PeftModel
+
+
+from pathlib import Path
 
 from trl import SFTTrainer
 
-from typing import Self, Dict, List
+from typing import Self, Dict, List, Tuple, Union
 
-from . import models, config, utils
+from . import data_sets, models, config, utils, constants
 
 
 class BaseAssistantAgent:
     dataset: Dataset
-    train_ds: Dataset = config.TRAIN_DS
-    validation_ds: Dataset = config.VALIDATION_DS
-    test_ds: Dataset = config.TEST_DS
+    train_ds: Dataset = data_sets.TRAIN_DS
+    validation_ds: Dataset = data_sets.VALIDATION_DS
+    test_ds: Dataset = data_sets.TEST_DS
 
     def __init__(self: Self) -> None:
         self.cfg = models.AssistantAgentConfig()
         self.tokenizer: AutoTokenizer = self.cfg._load_tokenizer()
-        self.model: AutoModelForCausalLM = self.cfg._load_model()
+        self.model: AutoModelForCausalLM = self.cfg._setup_peft_model()
         self.trainer: SFTTrainer | None = None
 
         self.kb: Dict = utils.get_knowledge_base()
@@ -35,9 +39,9 @@ class BaseAssistantAgent:
             raise RuntimeError("trainer is not initialised")
         return self.trainer.train()
 
-    def _generate(self: Self, messages: List[Dict]) -> str:
+    def _generate(self: Self, history: List[Dict]) -> str:
         text = self.tokenizer.apply_chat_template(
-            messages,
+            history,
             tokenize=False,
             add_generation_prompt=True,
         )
@@ -59,6 +63,29 @@ class BaseAssistantAgent:
 
     def _call(self: Self, history: List[Dict]) -> str:
         return self._generate(history)
+    
+    @classmethod
+    def _load_finetuned(
+        cls,
+        model_path: Path = Path(__file__).parent / "outputs"
+    ) -> Tuple["BaseAssistantAgent", AutoTokenizer]:
+
+        agent = cls()
+        tokenizer = AutoTokenizer.from_pretrained(model_path)
+
+        base_model_name = agent.cfg.qwen_model
+        base_model = AutoModelForCausalLM.from_pretrained(
+            base_model_name,
+            device_map="auto",
+            dtype="auto"
+        )
+
+        model = PeftModel.from_pretrained(base_model, model_path)
+
+        agent.tokenizer = tokenizer
+        agent.model = model
+
+        return agent, tokenizer
 
 
 class RAGAssistantAgent(BaseAssistantAgent):
@@ -92,12 +119,6 @@ class RAGAssistantAgent(BaseAssistantAgent):
 
     def _call(self: Self, history: List[Dict]) -> str:
 
-        if len(history) == 0 or history[0]["role"] != "system":
-            history = (
-                [{"role": "system", "content": "You are a helpful booking assistant."}]
-                + history
-        )
-
         last_user_msg = next(
             (m["content"] for m in reversed(history) if m["role"] == "user"),
             ""
@@ -114,6 +135,6 @@ class RAGAssistantAgent(BaseAssistantAgent):
             )
         }
 
-        full_messages = [rag_context] + history
+        full_history = [rag_context] + history
 
-        return self._generate(full_messages)
+        return self._generate(full_history)

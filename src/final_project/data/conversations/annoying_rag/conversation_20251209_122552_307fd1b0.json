@@ -1,0 +1,47 @@
+{
+  "metadata": {
+    "persona": "annoying",
+    "assistant_type": "rag",
+    "dataset_index": 2,
+    "ground_truth": "Yes, Yu Garden does have a very nice area for outdoor dining. Would you like to know more about them?",
+    "predicted": "<think>\n\n</think>\n\nYes, the Yu Garden does have a nice outdoor seating area for dining. Would you like to know more about them?"
+  },
+  "conversation": [
+    {
+      "content": "I am looking for a place to dine that has expensive romanian food.",
+      "role": "user"
+    },
+    {
+      "content": "No I'm sorry. Something else perhaps?",
+      "role": "assistant"
+    },
+    {
+      "content": "Is there one that serves Chinese instead?",
+      "role": "user"
+    },
+    {
+      "content": "I'm showing 9 entries throughout the area.  Do you have a preference between center, north, east, or south?",
+      "role": "assistant"
+    },
+    {
+      "content": "I have no preference.  I just need to book it for 8 at 12:45 on Thursday.",
+      "role": "user"
+    },
+    {
+      "content": "I have you booked at Yu Garden. The table will be reserved for 15 minutes. Your reference number is: D6LEPNCC. Anything else I can do for you?",
+      "role": "assistant"
+    },
+    {
+      "content": "Do you know if the restaurant has a good outdoor dining space?",
+      "role": "user"
+    },
+    {
+      "role": "assistant",
+      "content": "<think>\n\n</think>\n\nYes, the Yu Garden does have a nice outdoor seating area for dining. Would you like to know more about them?"
+    },
+    {
+      "role": "user",
+      "content": "Like I said before, outdoor seating isn't enough if it can't actually seat 8 at 12:45 without cramming. If Yu Garden won't work, find a nearby hotel restaurant with a proper outdoor area that can accommodate 8 at that time. <END> bye"
+    }
+  ]
+}

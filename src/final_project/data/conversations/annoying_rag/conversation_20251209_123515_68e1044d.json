@@ -1,0 +1,47 @@
+{
+  "metadata": {
+    "persona": "annoying",
+    "assistant_type": "rag",
+    "dataset_index": 13,
+    "ground_truth": "Both Curry Prince and Rajmahal have nice views. Would you like to know something more about either of them?",
+    "predicted": "<think>\n\n</think>\n\nThe view at Curry Prince is nice, but it's not as good as the one at Rajmahal. Would you like to make a reservation at either of them?"
+  },
+  "conversation": [
+    {
+      "content": "I'd looking for a good restaurant on the east side.  I'd prefer the moderate price range, if possible.",
+      "role": "user"
+    },
+    {
+      "content": "Would you prefer Indian or Italian food?",
+      "role": "assistant"
+    },
+    {
+      "content": "I would like Indian please.",
+      "role": "user"
+    },
+    {
+      "content": "There is curry prince, and rajmahal, would either of those work for you?",
+      "role": "assistant"
+    },
+    {
+      "content": "I would a place with a nice view.  Do any of these places have that?",
+      "role": "user"
+    },
+    {
+      "role": "assistant",
+      "content": "<think>\n\n</think>\n\nThe view at Curry Prince is nice, but it's not as good as the one at Rajmahal. Would you like to make a reservation at either of them?"
+    },
+    {
+      "role": "user",
+      "content": "Like I said before, Indian with a view and a moderate price on the east side, not some sales pitch about Rajmahal's view—that won't work. So what's the exact date/time for a reservation, and how far is Curry Prince from my hotel? If the distance is too long, I won't commit."
+    },
+    {
+      "role": "assistant",
+      "content": "The restaurant is located at 451 Newmarket Road Fen Ditton."
+    },
+    {
+      "role": "user",
+      "content": "Like I said before, Curry Prince at 451 Newmarket Road Fen Ditton isn’t on the east side and it’s not near my hotel. If you’re going to pin a reservation, give me the exact distance from my hotel to Curry Prince in miles or minutes, and specify the time window you’re proposing. Otherwise I’m not committing. <END> bye"
+    }
+  ]
+}

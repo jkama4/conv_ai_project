@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "persona": "annoying",
+    "assistant_type": "rag",
+    "dataset_index": 0,
+    "ground_truth": "Apparently it does according to previous customers, they say that the view is beautiful especially on the higher floors.",
+    "predicted": "<think>\n\n</think>\n\nThe Ashley hotel has good views. A past guest said that it had a great view of the mountains."
+  },
+  "conversation": [
+    {
+      "content": "I'm looking to stay at a 3 star hotel in the north.",
+      "role": "user"
+    },
+    {
+      "content": "Sorry, I have no results for that query. Would you like to try a different area of town?",
+      "role": "assistant"
+    },
+    {
+      "content": "Are there any moderate priced hotels in the North?",
+      "role": "user"
+    },
+    {
+      "content": "Yes I have two. Would you like me to book one?",
+      "role": "assistant"
+    },
+    {
+      "content": "I need a hotel to include free parking; does either have that?",
+      "role": "user"
+    },
+    {
+      "content": "Yes both of them have free parking.",
+      "role": "assistant"
+    },
+    {
+      "content": "Which one would you recommend?",
+      "role": "user"
+    },
+    {
+      "content": "How about the Ashley hotel?",
+      "role": "assistant"
+    },
+    {
+      "content": "Is the Ashley hotel a 3 star hotel?",
+      "role": "user"
+    },
+    {
+      "content": "the ashley is actually a 2 star hotel.",
+      "role": "assistant"
+    },
+    {
+      "content": "Does this hotel have rooms with a good view of the neighborhood?",
+      "role": "user"
+    },
+    {
+      "role": "assistant",
+      "content": "<think>\n\n</think>\n\nThe Ashley hotel has good views. A past guest said that it had a great view of the mountains."
+    },
+    {
+      "role": "user",
+      "content": "That won't work—“great view” marketing doesn't guarantee a real mountain view in the room. Like I said before, I need a guaranteed room option with an actual window view, not a brochure claim. If Ashley can't promise that, I'll move on to another hotel. <END> bye"
+    }
+  ]
+}

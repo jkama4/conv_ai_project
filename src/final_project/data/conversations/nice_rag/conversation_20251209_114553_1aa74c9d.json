@@ -1,0 +1,47 @@
+{
+  "metadata": {
+    "persona": "nice",
+    "assistant_type": "rag",
+    "dataset_index": 13,
+    "ground_truth": "Both Curry Prince and Rajmahal have nice views. Would you like to know something more about either of them?",
+    "predicted": "<think>\n\n</think>\n\nBoth the Curry Prince and Rajmahal restaurants have views that are great. You can see the city lights at Rajmahal."
+  },
+  "conversation": [
+    {
+      "content": "I'd looking for a good restaurant on the east side.  I'd prefer the moderate price range, if possible.",
+      "role": "user"
+    },
+    {
+      "content": "Would you prefer Indian or Italian food?",
+      "role": "assistant"
+    },
+    {
+      "content": "I would like Indian please.",
+      "role": "user"
+    },
+    {
+      "content": "There is curry prince, and rajmahal, would either of those work for you?",
+      "role": "assistant"
+    },
+    {
+      "content": "I would a place with a nice view.  Do any of these places have that?",
+      "role": "user"
+    },
+    {
+      "role": "assistant",
+      "content": "<think>\n\n</think>\n\nBoth the Curry Prince and Rajmahal restaurants have views that are great. You can see the city lights at Rajmahal."
+    },
+    {
+      "role": "user",
+      "content": "Thanks—that helps. Rajmahal seems perfect for the view. Do you want me to pull nearby mid-range hotel options with good reviews, or focus on a specific neighborhood?"
+    },
+    {
+      "role": "assistant",
+      "content": "I can see what is available for you. I see 4 guesthouses and 2 hotels. Do you have a preference?"
+    },
+    {
+      "role": "user",
+      "content": "Great, let's focus on mid-range hotels near Rajmahal to match the view. I'll pull options with strong reviews within a short walk or ride. <END> bye"
+    }
+  ]
+}

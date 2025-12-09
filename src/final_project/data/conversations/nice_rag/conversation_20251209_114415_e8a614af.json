@@ -1,0 +1,79 @@
+{
+  "metadata": {
+    "persona": "nice",
+    "assistant_type": "rag",
+    "dataset_index": 11,
+    "ground_truth": "The water pressure at the Allenbell is unfortunately one of the negatives as guests have mentioned not having enjoyable shower experiences.",
+    "predicted": "<think>\n\n</think>\n\nThe Allenbell has very good water pressure according to one guest. Do you want to know anything else?"
+  },
+  "conversation": [
+    {
+      "content": "Can you help me find a train leaving thursday departing from london liverpool street?",
+      "role": "user"
+    },
+    {
+      "content": "I have 10 trains leaving at this day and time with Cambridge as the destination. What will your approximate departure time be?",
+      "role": "assistant"
+    },
+    {
+      "content": "I don't have a preference but I do need to be in Cambridge by 15:00.",
+      "role": "user"
+    },
+    {
+      "content": "the TR1268 will get you there by 13:07, how many tickets?",
+      "role": "assistant"
+    },
+    {
+      "content": "What is the price of the ticket and departure time?",
+      "role": "user"
+    },
+    {
+      "content": "The departure time is 11:39 and the cost will be 16.60 pounds.",
+      "role": "assistant"
+    },
+    {
+      "content": "Thanks. I also need to find a guesthouse with free wifi.",
+      "role": "user"
+    },
+    {
+      "content": "I can also assist you with finding a guest house. Does the train fit your needs and would you like to book tickets for that?",
+      "role": "assistant"
+    },
+    {
+      "content": "No tickets for the train. I would like a guesthouse in the east that is expensive, please.",
+      "role": "user"
+    },
+    {
+      "content": "I do not have any expensive guesthouses in the east offering free wifi.",
+      "role": "assistant"
+    },
+    {
+      "content": "How about in the cheap price range instead?",
+      "role": "user"
+    },
+    {
+      "content": "I have the allenbell located at 517a coldham lane. Would you like reservations?",
+      "role": "assistant"
+    },
+    {
+      "content": "Yes, could you book it for 5 people for 3 nights starting thursday?",
+      "role": "user"
+    },
+    {
+      "content": "Booking was successful.\nReference number is : Q10RYGHF.",
+      "role": "assistant"
+    },
+    {
+      "content": "Is the water pressure good?",
+      "role": "user"
+    },
+    {
+      "role": "assistant",
+      "content": "<think>\n\n</think>\n\nThe Allenbell has very good water pressure according to one guest. Do you want to know anything else?"
+    },
+    {
+      "role": "user",
+      "content": "Thanks—that's helpful to know about the water pressure at Allenbell. I appreciate the quick info. I’ll confirm the check-in time and breakfast options on my end. bye <END>"
+    }
+  ]
+}

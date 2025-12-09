@@ -1,0 +1,71 @@
+{
+  "metadata": {
+    "persona": "annoying",
+    "assistant_type": "base",
+    "dataset_index": 0,
+    "ground_truth": "Apparently it does according to previous customers, they say that the view is beautiful especially on the higher floors.",
+    "predicted": "<think>\n\n</think>\n\nThe majority of the guests that stayed at the Ashley Hotel said that the view was amazing. One guest said the view was very nice."
+  },
+  "conversation": [
+    {
+      "content": "I'm looking to stay at a 3 star hotel in the north.",
+      "role": "user"
+    },
+    {
+      "content": "Sorry, I have no results for that query. Would you like to try a different area of town?",
+      "role": "assistant"
+    },
+    {
+      "content": "Are there any moderate priced hotels in the North?",
+      "role": "user"
+    },
+    {
+      "content": "Yes I have two. Would you like me to book one?",
+      "role": "assistant"
+    },
+    {
+      "content": "I need a hotel to include free parking; does either have that?",
+      "role": "user"
+    },
+    {
+      "content": "Yes both of them have free parking.",
+      "role": "assistant"
+    },
+    {
+      "content": "Which one would you recommend?",
+      "role": "user"
+    },
+    {
+      "content": "How about the Ashley hotel?",
+      "role": "assistant"
+    },
+    {
+      "content": "Is the Ashley hotel a 3 star hotel?",
+      "role": "user"
+    },
+    {
+      "content": "the ashley is actually a 2 star hotel.",
+      "role": "assistant"
+    },
+    {
+      "content": "Does this hotel have rooms with a good view of the neighborhood?",
+      "role": "user"
+    },
+    {
+      "role": "assistant",
+      "content": "<think>\n\n</think>\n\nThe majority of the guests that stayed at the Ashley Hotel said that the view was amazing. One guest said the view was very nice."
+    },
+    {
+      "role": "user",
+      "content": "That won't work; \"the view was amazing\" from a few guests isn't a guarantee, I need an actual booked room with a real view. Like I said before, give me the exact room type labeled \"city view\" or \"neighborhood view\" on a higher floor, plus photos or a floor plan. What real options exist, what's the floor, the price, and can I see the room before I commit?"
+    },
+    {
+      "role": "assistant",
+      "content": "I have no rooms with a city view or a neighborhood view.  Would you like me to book you a room?"
+    },
+    {
+      "role": "user",
+      "content": "That won't work; you already told me there are no city or neighborhood view rooms. I need a real option, with a room type labeled 'city view' or 'neighborhood view' on a higher floor, plus photos or a floor plan. If Ashley can't provide that, let's check other hotels in the North instead. <END> bye"
+    }
+  ]
+}

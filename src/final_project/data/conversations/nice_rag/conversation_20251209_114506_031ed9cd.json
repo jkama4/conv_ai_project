@@ -1,0 +1,71 @@
+{
+  "metadata": {
+    "persona": "nice",
+    "assistant_type": "rag",
+    "dataset_index": 12,
+    "ground_truth": "Some customers said that the drinks were very high quality, including the stout, the others said they were a bit underwhelming. Do you want to know anything else?",
+    "predicted": "<think>\n\n</think>\n\nMidsummer House Restaurant does have a good selection of beer. Can I help you with anything else?"
+  },
+  "conversation": [
+    {
+      "content": "I am looking a train arriving by 17:45 that leaves on Friday.",
+      "role": "user"
+    },
+    {
+      "content": "sure, what is your destination?",
+      "role": "assistant"
+    },
+    {
+      "content": "Leaving cambridge and going to norwich.",
+      "role": "user"
+    },
+    {
+      "content": "TR7747 leaves cambridge on friday and arrives in norwich at 16:55. Would you like me to book it for you?",
+      "role": "assistant"
+    },
+    {
+      "content": "Yes, book for three people, please.",
+      "role": "user"
+    },
+    {
+      "content": "Booking was successful, the total fee is 52.8 GBP payable at the station .\nReference number is : 8MRK0X44.",
+      "role": "assistant"
+    },
+    {
+      "content": "Thank you so much. I appreciate it. Can you also help me find a British restaurant in the centre of town?",
+      "role": "user"
+    },
+    {
+      "content": "i have 7 british restaurants in the centre of town. which price range would you prefer?",
+      "role": "assistant"
+    },
+    {
+      "content": "expensive price range will be good",
+      "role": "user"
+    },
+    {
+      "content": "How about midsummer house restaurant?",
+      "role": "assistant"
+    },
+    {
+      "content": "Do you know if Midsummer House Restaurant offers a nice, high-quality stout selection?",
+      "role": "user"
+    },
+    {
+      "role": "assistant",
+      "content": "<think>\n\n</think>\n\nMidsummer House Restaurant does have a good selection of beer. Can I help you with anything else?"
+    },
+    {
+      "role": "user",
+      "content": "That’s great to hear—the stout selection at Midsummer House sounds excellent, thank you for confirming. Shall I check availability and book a table for your trio on your Cambridge stay, and would you prefer beer pairing or the standard menu?"
+    },
+    {
+      "role": "assistant",
+      "content": "I would prefer the beer pairing. Do you have a time that you would like to be booked for?"
+    },
+    {
+      "role": "user",
+      "content": "Great, I'll book the beer pairing for three at 7:30 PM on Friday. I’ll check availability at Midsummer House and confirm the reservation right away. <END> bye"
+    }
+  ]
+}

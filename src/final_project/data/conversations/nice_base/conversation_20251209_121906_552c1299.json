@@ -1,0 +1,55 @@
+{
+  "metadata": {
+    "persona": "nice",
+    "assistant_type": "base",
+    "dataset_index": 6,
+    "ground_truth": "All the reviews regarding noise at University Arms Hotel were negative. The reviews at Gonville Hotel were mixed with the room being described as both noisy and quiet. Would you prefer to book the Gonville Hotel?",
+    "predicted": "<think>\n\n</think>\n\nThe Gonville Hotel is known to have a lot of noise, while the University Arms Hotel has a quiet environment."
+  },
+  "conversation": [
+    {
+      "content": "I am looking got a hotel near the centre and I need to it have free wifi.",
+      "role": "user"
+    },
+    {
+      "content": "I have 5 hotels that fit that criteria. Are you looking for a particular price range?",
+      "role": "assistant"
+    },
+    {
+      "content": "Expensive. A guest house, please.",
+      "role": "user"
+    },
+    {
+      "content": "I have no matches that fit that criteria, would you like me to look up something else?",
+      "role": "assistant"
+    },
+    {
+      "content": "How about one that is a hotel?",
+      "role": "user"
+    },
+    {
+      "content": "Yes, I have two results. Gonville hotel has 3 stars and University Arms has 4 stars, would one of those work for you?",
+      "role": "assistant"
+    },
+    {
+      "content": "Which one has the least noisy, disruptive environment?",
+      "role": "user"
+    },
+    {
+      "role": "assistant",
+      "content": "<think>\n\n</think>\n\nThe Gonville Hotel is known to have a lot of noise, while the University Arms Hotel has a quiet environment."
+    },
+    {
+      "role": "user",
+      "content": "Thanks—that makes the choice clear: University Arms is the quieter option. Would you like me to check current rates and availability for your dates at University Arms near the center?"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, I can check that for you. How many people and how many nights?"
+    },
+    {
+      "role": "user",
+      "content": "Two people for 3 nights, thank you. I'll pull current rates and availability for those dates at University Arms. Bye <END>"
+    }
+  ]
+}

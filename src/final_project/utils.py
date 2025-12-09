@@ -2,87 +2,22 @@ import torch
 import json
 import subprocess
 import shutil
+import uuid
 
+from datetime import datetime
 from datasets import Dataset
 from pathlib import Path
 from typing import Tuple, List, Dict
 
-from . import constants
-
+from .user_agent import UserAgent
+from .assistant_agent import BaseAssistantAgent, RAGAssistantAgent
+from .data_sets import setup_repo
 
 def pick_bf16():
     if torch.cuda.is_available():
         major, _ = torch.cuda.get_device_capability()
         return major >= 8
     return False
-
-
-def setup_repo(
-    repo_url: str,
-    repo_name: str,
-    work_dir: Path | None = None,
-) -> Path:
-
-    if work_dir is None:
-        work_dir = Path(__file__).parent / "data"
-
-    work_dir.mkdir(exist_ok=True, parents=True)
-
-    repo_path = work_dir / repo_name
-
-    if repo_path.exists():
-        shutil.rmtree(repo_path)
-
-    subprocess.run(
-        ["git", "clone", repo_url, str(repo_path)],
-        check=True
-    )
-
-    data_dir = repo_path / "data"
-    data_dir.mkdir(exist_ok=True)
-
-    return data_dir
-
-
-def format_dialogue(dialogue: List[Dict]) -> List[Dict]:
-    messages = []
-
-    messages.append({
-        "role": "assistant",
-        "content": constants.ASSISTANT_INSTRUCTION_PROMPT,
-    })
-
-    for turn in dialogue:
-        if turn["speaker"] == "U":
-            messages.append({"role": "user", "content": turn["text"]})
-        elif turn["speaker"] == "S":
-            messages.append({"role": "assistant", "content": turn["text"]})
-        else:
-            raise ValueError("Unknown speaker type")
-
-    return messages
-
-
-
-def reformat_dataset(dataset, labels_dataset):
-    reformatted_dataset = {"messages": []}
-
-    for i in range(len(dataset)):
-        try:
-            sample_dialogue = format_dialogue(dataset[i])
-
-            sample_dialogue.append({
-                "role": "assistant",
-                "content": labels_dataset[i]["response"]
-            })
-
-            reformatted_dataset["messages"].append(sample_dialogue)
-
-        except Exception:
-            continue
-
-    return reformatted_dataset
-
 
 
 def get_knowledge_base(
@@ -115,45 +50,32 @@ def get_history(
     return history
 
 
-def create_datasets(
-    data_path: Path = setup_repo(
-        repo_url="https://github.com/lkra/dstc11-track5.git", 
-        repo_name="dstc11-track5",
-    ),
-) -> Tuple[Dataset]:
+def save_conversation(
+    history: List[Dict],
+    subject_dir: str,
+    metadata: Dict | None =None
+) -> str:
+    
+    print("SAVING conversation ...")
+    base_dir = Path(__file__).resolve().parent / "data" / "conversations"
 
-    with open(data_path / "train/logs.json", "r") as f:
-        train_ds = json.load(f)
+    folder = base_dir / subject_dir
+    folder.mkdir(parents=True, exist_ok=True)
 
-    with open(data_path / "train/labels.json", "r") as f:
-        train_labels = json.load(f)
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    uid = uuid.uuid4().hex[:8]
+    filename = f"conversation_{timestamp}_{uid}.json"
+    file_path = folder / filename
 
-    with open(data_path / "val/logs.json", "r") as f:
-        validation_ds = json.load(f)
+    data = {
+        "metadata": metadata or {},
+        "conversation": history
+    }
 
-    with open(data_path / "val/labels.json", "r") as f:
-        validation_labels = json.load(f)
+    with open(file_path, "w", encoding="utf-8") as f:
+        print("ACCESSED SAVE FILE")
+        json.dump(data, f, indent=2, ensure_ascii=False)
 
-    with open(data_path / "test/logs.json", "r") as f:
-        test_ds = json.load(f)
+    print("SAVED!")
 
-    with open(data_path / "test/labels.json", "r") as f:
-        test_labels = json.load(f)
-
-    return train_ds, train_labels, validation_ds, validation_labels, test_ds, test_labels
-
-
-def setup_datasets() -> Tuple[Dataset]:
-    train_ds, train_labels, validation_ds, validation_labels, test_ds, test_labels = create_datasets()
-
-    return (
-        Dataset.from_dict(
-            reformat_dataset(dataset=train_ds, labels_dataset=train_labels)
-        ),
-        Dataset.from_dict(
-            reformat_dataset(dataset=validation_ds, labels_dataset=validation_labels)
-        ),
-        Dataset.from_dict(
-            reformat_dataset(dataset=test_ds, labels_dataset=test_labels)
-        ),
-    )
+    return str(file_path)

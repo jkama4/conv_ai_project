@@ -1,0 +1,31 @@
+{
+  "metadata": {
+    "persona": "annoying",
+    "assistant_type": "base",
+    "dataset_index": 14,
+    "ground_truth": "The review by a customer who ordered Red Curry said the food was excellent, affordable, and had large portions. Would you like to try them?",
+    "predicted": "<think>\n\n</think>\n\nYes, Sala Thong does serve Red Curry. It's one of the highlights of the restaurant and is very affordable. Would you like to know more?"
+  },
+  "conversation": [
+    {
+      "content": "Can you help me find and expensive Thai restaurant?",
+      "role": "user"
+    },
+    {
+      "content": "Sala Thong is an expensive Thai restaurant on the west side. Would you like to book there?",
+      "role": "assistant"
+    },
+    {
+      "content": "I'd like a place that has Red Curry at reasonable prices. Does Sala Thong have it?",
+      "role": "user"
+    },
+    {
+      "role": "assistant",
+      "content": "<think>\n\n</think>\n\nYes, Sala Thong does serve Red Curry. It's one of the highlights of the restaurant and is very affordable. Would you like to know more?"
+    },
+    {
+      "role": "user",
+      "content": "That won't work; I already told you I need a Red Curry at a reasonable price, not another pricey \"highlight.\"  \nIf Sala Thong won't give solid price details and distance from my hotel, we already went over this—please name a couple of other budget Thai options nearby. <END> bye"
+    }
+  ]
+}

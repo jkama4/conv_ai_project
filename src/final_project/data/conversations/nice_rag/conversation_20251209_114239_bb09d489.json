@@ -1,0 +1,39 @@
+{
+  "metadata": {
+    "persona": "nice",
+    "assistant_type": "rag",
+    "dataset_index": 9,
+    "ground_truth": "Frankie and Bennys is not in the best part of town, and the view from the restaurant is of a parking lot, but it is a 10 minute walk from other city sights.",
+    "predicted": "<think>\n\n</think>\n\nThe location of Frankie and Bennys is not very good according to one customer, but another said it was great."
+  },
+  "conversation": [
+    {
+      "content": "Hello, I am looking for an expensive restaurant on the south side of town.",
+      "role": "user"
+    },
+    {
+      "content": "Frankie and Bennys serves Italian food, it is in the South Part of town, and the price range is expensive. Can I help you with anything else?",
+      "role": "assistant"
+    },
+    {
+      "content": "Is it in a good location to the sights?",
+      "role": "user"
+    },
+    {
+      "role": "assistant",
+      "content": "<think>\n\n</think>\n\nThe location of Frankie and Bennys is not very good according to one customer, but another said it was great."
+    },
+    {
+      "role": "user",
+      "content": "Thanks for checking — going back to what we discussed, Frankie & Bennys in the South Part can be convenient if your sights are toward that side of town, but central sights might be a bit farther. Would you like me to pull up Italian options closer to the main sights or near your hotel?"
+    },
+    {
+      "role": "assistant",
+      "content": "No, I think that Frankie and Bennys is just right. Do you want to make a reservation?"
+    },
+    {
+      "role": "user",
+      "content": "Perfect, Frankie & Bennys in the South Part it is. I’ll book a table for two at 7:00 PM—thank you, that helps a lot. <END> bye"
+    }
+  ]
+}

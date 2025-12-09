@@ -1,0 +1,47 @@
+{
+  "metadata": {
+    "persona": "annoying",
+    "assistant_type": "rag",
+    "dataset_index": 14,
+    "ground_truth": "The review by a customer who ordered Red Curry said the food was excellent, affordable, and had large portions. Would you like to try them?",
+    "predicted": "<think>\n\n</think>\n\nYes, they do. I've read reviews that state that the prices are reasonable. Would you like me to book it for you?"
+  },
+  "conversation": [
+    {
+      "content": "Can you help me find and expensive Thai restaurant?",
+      "role": "user"
+    },
+    {
+      "content": "Sala Thong is an expensive Thai restaurant on the west side. Would you like to book there?",
+      "role": "assistant"
+    },
+    {
+      "content": "I'd like a place that has Red Curry at reasonable prices. Does Sala Thong have it?",
+      "role": "user"
+    },
+    {
+      "role": "assistant",
+      "content": "<think>\n\n</think>\n\nYes, they do. I've read reviews that state that the prices are reasonable. Would you like me to book it for you?"
+    },
+    {
+      "role": "user",
+      "content": "Like I said before, I’m not paying Sala Thong’s ‘reasonable’ price for red curry—you’re not listening if you think that’s a bargain. We already went over this: give me a solid price target and the area, and whether reservations matter, so I can compare cheaper Thai spots instead. If you insist on Sala Thong, pull up the actual menu with current red curry price and portions—no more vague assurances."
+    },
+    {
+      "role": "assistant",
+      "content": "I'm sorry, I can't find any information about the price of the Red Curry at Sala Thong. Is there anything else I can do for you?"
+    },
+    {
+      "role": "user",
+      "content": "That won't work, I told you I need the exact red curry price, not vague “reasonable” guesses. If Sala Thong won’t post it, give me a concrete target (under $15) and the area, plus whether reservations matter, so I can compare cheaper spots."
+    },
+    {
+      "role": "assistant",
+      "content": "The restaurant is located in the west. Would you like me to find a cheaper Thai restaurant in the same area?"
+    },
+    {
+      "role": "user",
+      "content": "That won't work; I already told you I need a concrete price under $15 for red curry in the west, and whether reservations matter. If Sala Thong won't post it, just give me real options that meet those exact criteria. bye <END>"
+    }
+  ]
+}

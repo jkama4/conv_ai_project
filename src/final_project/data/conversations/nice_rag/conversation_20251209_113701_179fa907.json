@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "persona": "nice",
+    "assistant_type": "rag",
+    "dataset_index": 2,
+    "ground_truth": "Yes, Yu Garden does have a very nice area for outdoor dining. Would you like to know more about them?",
+    "predicted": "<think>\n\n</think>\n\nYes, Yu Garden does have a nice outdoor seating area. Is there anything else you'd like to know about them?"
+  },
+  "conversation": [
+    {
+      "content": "I am looking for a place to dine that has expensive romanian food.",
+      "role": "user"
+    },
+    {
+      "content": "No I'm sorry. Something else perhaps?",
+      "role": "assistant"
+    },
+    {
+      "content": "Is there one that serves Chinese instead?",
+      "role": "user"
+    },
+    {
+      "content": "I'm showing 9 entries throughout the area.  Do you have a preference between center, north, east, or south?",
+      "role": "assistant"
+    },
+    {
+      "content": "I have no preference.  I just need to book it for 8 at 12:45 on Thursday.",
+      "role": "user"
+    },
+    {
+      "content": "I have you booked at Yu Garden. The table will be reserved for 15 minutes. Your reference number is: D6LEPNCC. Anything else I can do for you?",
+      "role": "assistant"
+    },
+    {
+      "content": "Do you know if the restaurant has a good outdoor dining space?",
+      "role": "user"
+    },
+    {
+      "role": "assistant",
+      "content": "<think>\n\n</think>\n\nYes, Yu Garden does have a nice outdoor seating area. Is there anything else you'd like to know about them?"
+    },
+    {
+      "role": "user",
+      "content": "That's helpful, thank you. Going back to the Thursday plan, would you like me to pull a few hotel options within easy walking distance of Yu Garden for after dinner, or should I focus on places with good late-night access?"
+    },
+    {
+      "role": "assistant",
+      "content": "Yu Garden is in the heart of the city so it's possible that the outdoor dining will be right in the city centre. Do you want to stay at the hotel or do you need to book another place?"
+    },
+    {
+      "role": "user",
+      "content": "Going back to what we discussed, let's stay at a hotel within easy walking distance of Yu Garden for after dinner. Thanks—that's helpful. Could you pull a few options in that area with late check-in and solid reviews?"
+    },
+    {
+      "role": "assistant",
+      "content": "I was able to get you in. The Allenbell is a good place. It's in the east, and also has free wifi. Your reference number is: 79Y6V9K9."
+    },
+    {
+      "role": "user",
+      "content": "Thank you—that helps a lot. I can pull a few more hotel options within easy walking distance of Yu Garden, focusing on late check-in and solid reviews. Do you want me to include price ranges and approximate walking times to the restaurant for easier comparison?"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "metadata": {
+    "persona": "annoying",
+    "assistant_type": "rag",
+    "dataset_index": 18,
+    "ground_truth": "Ashley Hotel has been complimented for its quiet environment, while Lovell Lodge has a few complaints about the noise but others have said the ambiance is nice.",
+    "predicted": "<think>\n\n</think>\n\nAshley Hotel has a lot of noise, but Lovell Lodge has a lot of noise, too. Would you like to try either one?"
+  },
+  "conversation": [
+    {
+      "content": "I would like to book a room in a hotel, please.",
+      "role": "user"
+    },
+    {
+      "content": "Do you prefer a particular area of town or price range?",
+      "role": "assistant"
+    },
+    {
+      "content": "Yes, I would like a hotel in the north please.",
+      "role": "user"
+    },
+    {
+      "content": "There are two hotels in the north, Ashley Hotel and Lovell Lodge which would you like?",
+      "role": "assistant"
+    },
+    {
+      "content": "Is either of them in a quiet area?",
+      "role": "user"
+    },
+    {
+      "role": "assistant",
+      "content": "<think>\n\n</think>\n\nAshley Hotel has a lot of noise, but Lovell Lodge has a lot of noise, too. Would you like to try either one?"
+    },
+    {
+      "role": "user",
+      "content": "Like I said before, I need quiet, not a drumline from the street. Are there any other north hotels with true soundproofing or quiet floors, or do we have to swing to a different area? I won't settle for more noise without a solid guarantee."
+    },
+    {
+      "role": "assistant",
+      "content": "<think>\n\n</think>\n\nAccording to the reviews I have on hand for this location, the noise level is extremely quiet and comfortable, with no disruptive patrons."
+    },
+    {
+      "role": "user",
+      "content": "That won't work; I told you I need genuine soundproofing, not vague reviews. Like I said before, do any north hotels publish decibel ratings or certify quiet floors, or do we have to move to a different area for true silence?"
+    },
+    {
+      "role": "assistant",
+      "content": "I'm sorry, but I don't have access to any other information beyond the reviews I have on hand. Would you like to try either hotel?"
+    },
+    {
+      "role": "user",
+      "content": "Like I said before, vague \"extremely quiet\" reviews aren't good enough. I need decibel ratings or a certified quiet-room guarantee from the north hotels; if they don't publish that, we're stuck with non-quantified noise. bye <END>"
+    }
+  ]
+}

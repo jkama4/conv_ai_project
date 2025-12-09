@@ -1,0 +1,39 @@
+{
+  "metadata": {
+    "persona": "annoying",
+    "assistant_type": "base",
+    "dataset_index": 9,
+    "ground_truth": "Frankie and Bennys is not in the best part of town, and the view from the restaurant is of a parking lot, but it is a 10 minute walk from other city sights.",
+    "predicted": "<think>\n\n</think>\n\nYes, they have a great location with a great view. Can I help you with anything else?"
+  },
+  "conversation": [
+    {
+      "content": "Hello, I am looking for an expensive restaurant on the south side of town.",
+      "role": "user"
+    },
+    {
+      "content": "Frankie and Bennys serves Italian food, it is in the South Part of town, and the price range is expensive. Can I help you with anything else?",
+      "role": "assistant"
+    },
+    {
+      "content": "Is it in a good location to the sights?",
+      "role": "user"
+    },
+    {
+      "role": "assistant",
+      "content": "<think>\n\n</think>\n\nYes, they have a great location with a great view. Can I help you with anything else?"
+    },
+    {
+      "role": "user",
+      "content": "That won't work if it's not actually near the sights—like I said before, \"great location\" isn't the same as walkable access. We already went over this: I need a hotel with a solid on-site restaurant or a nearby upscale option within a 10-minute stroll to the main attractions—you got anything like that?"
+    },
+    {
+      "role": "assistant",
+      "content": "<think>\n\n</think>\n\nThe restaurant is in a good location, but some people feel that it is in a bad part of town. Others feel that it is in a good part of town."
+    },
+    {
+      "role": "user",
+      "content": "That won't work—like I said before, I need a hotel with a solid on-site restaurant or a nearby upscale option within a 10-minute stroll to the main attractions. \nIf Frankie and Bennys' “great location” is too vague, name concrete hotels in the South Part that actually meet the 10-minute walk requirement and have reliable dining on-site or within a short stroll. \nWe already went over this, so stop hedging and give me real options. \n<END> bye"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "metadata": {
+    "persona": "nice",
+    "assistant_type": "rag",
+    "dataset_index": 1,
+    "ground_truth": "According to reviews, the Golden Curry has large portion sizes. Do you want me to book a table for you?",
+    "predicted": "<think>\n\n</think>\n\nYes, the portion sizes at the Golden Curry are large. Past guests have described them as \"excellent\" and \"a lot of food\"."
+  },
+  "conversation": [
+    {
+      "content": "Hi! Can you give me some information on the Golden Curry restaurant?",
+      "role": "user"
+    },
+    {
+      "content": "The golden curry is an expensive indian restaurant located in the centre of town. Is there anything else you would like to know?",
+      "role": "assistant"
+    },
+    {
+      "content": "Are the portion sizes here large?",
+      "role": "user"
+    },
+    {
+      "role": "assistant",
+      "content": "<think>\n\n</think>\n\nYes, the portion sizes at the Golden Curry are large. Past guests have described them as \"excellent\" and \"a lot of food\"."
+    },
+    {
+      "role": "user",
+      "content": "That’s helpful—thanks. Going back to accommodations, do you have any hotel suggestions within easy walking distance of Golden Curry, or should I look a bit farther for better value? And would you recommend other nearby restaurants for a future date?"
+    },
+    {
+      "role": "assistant",
+      "content": "The Alexander Bed and Breakfast is a great place to stay. Would you like me to book a room for you there?"
+    },
+    {
+      "role": "user",
+      "content": "That sounds wonderful—please go ahead and book The Alexander Bed and Breakfast for two adults at the earliest available weekend. Thank you for handling the arrangements. <END> bye"
+    }
+  ]
+}

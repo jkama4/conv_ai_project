@@ -109,27 +109,23 @@ def run_program(
                     "predicted": predicted_last["content"],
                 }
 
-                # utils.save_conversation(
-                #     history=conversation,
-                #     subject_dir=subject_dir,
-                #     metadata=metadata
-                # )
+                utils.save_conversation(
+                    history=conversation,
+                    subject_dir=subject_dir,
+                    metadata=metadata
+                )
 
                 print({
                     "metadata": metadata,
                     "conversation": conversation
                 })
 
-                break # remove later
 
                 results.append({
                     "metadata": metadata,
                     "conversation": conversation
                 })
-            break # remove later
     
-        break # remove later
-
     return results
 
 

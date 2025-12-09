@@ -1,10 +1,11 @@
 {
   "metadata": {
+    "custom": "false",
     "persona": "nice",
     "assistant_type": "rag",
     "dataset_index": 9,
     "ground_truth": "Frankie and Bennys is not in the best part of town, and the view from the restaurant is of a parking lot, but it is a 10 minute walk from other city sights.",
-    "predicted": "<think>\n\n</think>\n\nThe location of Frankie and Bennys is not very good according to one customer, but another said it was great."
+    "predicted": "The location of Frankie and Bennys is not very good according to one customer, but another said it was great."
   },
   "conversation": [
     {
@@ -21,7 +22,7 @@
     },
     {
       "role": "assistant",
-      "content": "<think>\n\n</think>\n\nThe location of Frankie and Bennys is not very good according to one customer, but another said it was great."
+      "content": "The location of Frankie and Bennys is not very good according to one customer, but another said it was great."
     },
     {
       "role": "user",

@@ -1,10 +1,11 @@
 {
   "metadata": {
+    "custom": "false",
     "persona": "annoying",
     "assistant_type": "base",
     "dataset_index": 5,
     "ground_truth": "Nando's does serve alcoholic drinks and that must include beer. I'll find out for you. Is there anything else you'd like to know about them?",
-    "predicted": "<think>\n\n</think>\n\nYes, Nandos does serve alcohol. They have a wide variety of drinks to choose from. Would you like to know anything else about them?"
+    "predicted": "Yes, Nandos does serve alcohol. They have a wide variety of drinks to choose from. Would you like to know anything else about them?"
   },
   "conversation": [
     {
@@ -21,7 +22,7 @@
     },
     {
       "role": "assistant",
-      "content": "<think>\n\n</think>\n\nYes, Nandos does serve alcohol. They have a wide variety of drinks to choose from. Would you like to know anything else about them?"
+      "content": "Yes, Nandos does serve alcohol. They have a wide variety of drinks to choose from. Would you like to know anything else about them?"
     },
     {
       "role": "user",

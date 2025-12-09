@@ -1,10 +1,11 @@
 {
   "metadata": {
+    "custom": "false",
     "persona": "nice",
     "assistant_type": "rag",
     "dataset_index": 17,
     "ground_truth": "Guests that have stayed at the Acorn Guest House have said that the water pressure was pretty low and it is nothing to write home about.",
-    "predicted": "<think>\n\n</think>\n\nThe water pressure at the Acorn Guest House is said to be very strong. Can I help you with anything else?"
+    "predicted": "The water pressure at the Acorn Guest House is said to be very strong. Can I help you with anything else?"
   },
   "conversation": [
     {
@@ -45,7 +46,7 @@
     },
     {
       "role": "assistant",
-      "content": "<think>\n\n</think>\n\nThe water pressure at the Acorn Guest House is said to be very strong. Can I help you with anything else?"
+      "content": "The water pressure at the Acorn Guest House is said to be very strong. Can I help you with anything else?"
     },
     {
       "role": "user",
@@ -53,7 +54,7 @@
     },
     {
       "role": "assistant",
-      "content": "<think>\n\n</think>\n\nYes, the breakfast options are said to be delicious. The staff was also very friendly. Can I help you with anything else?"
+      "content": "Yes, the breakfast options are said to be delicious. The staff was also very friendly. Can I help you with anything else?"
     },
     {
       "role": "user",

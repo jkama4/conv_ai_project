@@ -1,10 +1,11 @@
 {
   "metadata": {
+    "custom": "false",
     "persona": "nice",
     "assistant_type": "base",
     "dataset_index": 13,
     "ground_truth": "Both Curry Prince and Rajmahal have nice views. Would you like to know something more about either of them?",
-    "predicted": "<think>\n\n</think>\n\nThe view at the Curry Prince restaurant is said to be a bit mediocre, but the view at the Rajmahal restaurant is said to be nice."
+    "predicted": "The view at the Curry Prince restaurant is said to be a bit mediocre, but the view at the Rajmahal restaurant is said to be nice."
   },
   "conversation": [
     {
@@ -29,7 +30,7 @@
     },
     {
       "role": "assistant",
-      "content": "<think>\n\n</think>\n\nThe view at the Curry Prince restaurant is said to be a bit mediocre, but the view at the Rajmahal restaurant is said to be nice."
+      "content": "The view at the Curry Prince restaurant is said to be a bit mediocre, but the view at the Rajmahal restaurant is said to be nice."
     },
     {
       "role": "user",

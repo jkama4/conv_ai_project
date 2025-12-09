@@ -1,10 +1,11 @@
 {
   "metadata": {
+    "custom": "false",
     "persona": "annoying",
     "assistant_type": "base",
     "dataset_index": 19,
     "ground_truth": "Unfortunately, the reviewers said that the showers water pressure this week at the guest house. Is there anything else you need to know?",
-    "predicted": "<think>\n\n</think>\n\nAccording to the reviews I have on hand for that location, the opinions are mixed.  Half found the water very strong, and half found it very weak."
+    "predicted": "According to the reviews I have on hand for that location, the opinions are mixed.  Half found the water very strong, and half found it very weak."
   },
   "conversation": [
     {
@@ -77,7 +78,7 @@
     },
     {
       "role": "assistant",
-      "content": "<think>\n\n</think>\n\nAccording to the reviews I have on hand for that location, the opinions are mixed.  Half found the water very strong, and half found it very weak."
+      "content": "According to the reviews I have on hand for that location, the opinions are mixed.  Half found the water very strong, and half found it very weak."
     },
     {
       "role": "user",
@@ -85,7 +86,7 @@
     },
     {
       "role": "assistant",
-      "content": "<think>\n\n</think>\n\nThe Acorn Guest House has a spa that offers a relaxing experience, but the reviews on the shower pressure are mixed. One guest said it was really strong, while another said it was weak. Would you like me to check other places?"
+      "content": "The Acorn Guest House has a spa that offers a relaxing experience, but the reviews on the shower pressure are mixed. One guest said it was really strong, while another said it was weak. Would you like me to check other places?"
     },
     {
       "role": "user",

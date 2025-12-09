@@ -1,10 +1,11 @@
 {
   "metadata": {
+    "custom": "false",
     "persona": "nice",
     "assistant_type": "base",
     "dataset_index": 8,
     "ground_truth": "Those that have dined previously at the La Raza restaurant regard its beer quality as being great and a highlight.",
-    "predicted": "<think>\n\n</think>\n\nThe La Raza gets some mixed reviews about their beers. Some people think the drinks are a good value and others say they are overpriced. Would you like me to find another place with better reviews?"
+    "predicted": "The La Raza gets some mixed reviews about their beers. Some people think the drinks are a good value and others say they are overpriced. Would you like me to find another place with better reviews?"
   },
   "conversation": [
     {
@@ -37,7 +38,7 @@
     },
     {
       "role": "assistant",
-      "content": "<think>\n\n</think>\n\nThe La Raza gets some mixed reviews about their beers. Some people think the drinks are a good value and others say they are overpriced. Would you like me to find another place with better reviews?"
+      "content": "The La Raza gets some mixed reviews about their beers. Some people think the drinks are a good value and others say they are overpriced. Would you like me to find another place with better reviews?"
     },
     {
       "role": "user",

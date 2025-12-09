@@ -1,10 +1,11 @@
 {
   "metadata": {
+    "custom": "false",
     "persona": "annoying",
     "assistant_type": "rag",
     "dataset_index": 18,
     "ground_truth": "Ashley Hotel has been complimented for its quiet environment, while Lovell Lodge has a few complaints about the noise but others have said the ambiance is nice.",
-    "predicted": "<think>\n\n</think>\n\nAshley Hotel has a lot of noise, but Lovell Lodge has a lot of noise, too. Would you like to try either one?"
+    "predicted": "Ashley Hotel has a lot of noise, but Lovell Lodge has a lot of noise, too. Would you like to try either one?"
   },
   "conversation": [
     {
@@ -29,7 +30,7 @@
     },
     {
       "role": "assistant",
-      "content": "<think>\n\n</think>\n\nAshley Hotel has a lot of noise, but Lovell Lodge has a lot of noise, too. Would you like to try either one?"
+      "content": "Ashley Hotel has a lot of noise, but Lovell Lodge has a lot of noise, too. Would you like to try either one?"
     },
     {
       "role": "user",
@@ -37,7 +38,7 @@
     },
     {
       "role": "assistant",
-      "content": "<think>\n\n</think>\n\nAccording to the reviews I have on hand for this location, the noise level is extremely quiet and comfortable, with no disruptive patrons."
+      "content": "According to the reviews I have on hand for this location, the noise level is extremely quiet and comfortable, with no disruptive patrons."
     },
     {
       "role": "user",

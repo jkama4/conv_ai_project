@@ -267,6 +267,20 @@ tqdm = ">=4.31.1"
 transformers = ">=3.0.0"
 
 [[package]]
+name = "bleu"
+version = "0.3"
+description = "A Python Wrapper to calculate standard BLEU scores for NLP"
+optional = false
+python-versions = "*"
+groups = ["main"]
+files = [
+    {file = "bleu-0.3.tar.gz", hash = "sha256:6edae73a588fe8b72678d3233da3be9e901a29d8313858347998910dc28baf80"},
+]
+
+[package.dependencies]
+efficiency = "*"
+
+[[package]]
 name = "certifi"
 version = "2025.11.12"
 description = "Python package for providing Mozilla's CA Bundle."
@@ -604,6 +618,22 @@ files = [
     {file = "distro-1.9.0-py3-none-any.whl", hash = "sha256:7bffd925d65168f85027d8da9af6bddab658135b840670a223589bc0c8ef02b2"},
     {file = "distro-1.9.0.tar.gz", hash = "sha256:2fa77c6fd8940f116ee1d6b94a2f90b13b5ea8d019b98bc8bafdcabcdd9bdbed"},
 ]
+
+[[package]]
+name = "efficiency"
+version = "2.0"
+description = "A package for efficient programming"
+optional = false
+python-versions = "*"
+groups = ["main"]
+files = [
+    {file = "efficiency-2.0-py3-none-any.whl", hash = "sha256:111ac18e29cb656476bcac420306d68cd5595dae350959a6d7c8773834e35c0e"},
+    {file = "efficiency-2.0.tar.gz", hash = "sha256:b786908ef529cb8c6d28fc4e0f3c10e15b35f8063a8d26b6b14c860031e3784a"},
+]
+
+[package.dependencies]
+numpy = "*"
+pandas = "*"
 
 [[package]]
 name = "evaluate"
@@ -4260,4 +4290,4 @@ propcache = ">=0.2.1"
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.13,<3.15"
-content-hash = "d35f4dbe210ea71c5e122e11d32147e97986524704691f760e8d0a40ce8b85d0"
+content-hash = "877eaf92bbf1924cb86ae55dfc3737f0786fe1ae19dae7ccea27f84804c9c749"

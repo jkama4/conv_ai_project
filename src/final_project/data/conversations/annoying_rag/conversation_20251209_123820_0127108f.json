@@ -1,10 +1,11 @@
 {
   "metadata": {
+    "custom": "false",
     "persona": "annoying",
     "assistant_type": "rag",
     "dataset_index": 16,
     "ground_truth": "According to the reviews I have on hand for this location, the water pressure here is low and could be a lot better.  Sorry to disappoint!",
-    "predicted": "<think>\n\n</think>\n\nI'm not sure. The Kirkwood House has one comment about the water pressure being low, but another said it was super fast."
+    "predicted": "I'm not sure. The Kirkwood House has one comment about the water pressure being low, but another said it was super fast."
   },
   "conversation": [
     {
@@ -29,7 +30,7 @@
     },
     {
       "role": "assistant",
-      "content": "<think>\n\n</think>\n\nI'm not sure. The Kirkwood House has one comment about the water pressure being low, but another said it was super fast."
+      "content": "I'm not sure. The Kirkwood House has one comment about the water pressure being low, but another said it was super fast."
     },
     {
       "role": "user",

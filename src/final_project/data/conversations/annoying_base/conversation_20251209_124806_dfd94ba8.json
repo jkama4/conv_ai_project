@@ -1,10 +1,11 @@
 {
   "metadata": {
+    "custom": "false",
     "persona": "annoying",
     "assistant_type": "base",
     "dataset_index": 11,
     "ground_truth": "The water pressure at the Allenbell is unfortunately one of the negatives as guests have mentioned not having enjoyable shower experiences.",
-    "predicted": "<think>\n\n</think>\n\nThe Allenbell has a very good water pressure that is more than enough for even the heaviest of guests."
+    "predicted": "The Allenbell has a very good water pressure that is more than enough for even the heaviest of guests."
   },
   "conversation": [
     {
@@ -69,7 +70,7 @@
     },
     {
       "role": "assistant",
-      "content": "<think>\n\n</think>\n\nThe Allenbell has a very good water pressure that is more than enough for even the heaviest of guests."
+      "content": "The Allenbell has a very good water pressure that is more than enough for even the heaviest of guests."
     },
     {
       "role": "user",

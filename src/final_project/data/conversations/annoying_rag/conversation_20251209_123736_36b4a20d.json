@@ -1,10 +1,11 @@
 {
   "metadata": {
+    "custom": "false",
     "persona": "annoying",
     "assistant_type": "rag",
     "dataset_index": 15,
     "ground_truth": "The Express by Holiday Inn has really comfortable beds, based on the one review I could find about the place.",
-    "predicted": "<think>\n\n</think>\n\nThe bed was very comfortable and really made you feel like you were in your own bed. The staff was very helpful and made sure you were comfortable."
+    "predicted": "The bed was very comfortable and really made you feel like you were in your own bed. The staff was very helpful and made sure you were comfortable."
   },
   "conversation": [
     {
@@ -29,7 +30,7 @@
     },
     {
       "role": "assistant",
-      "content": "<think>\n\n</think>\n\nThe bed was very comfortable and really made you feel like you were in your own bed. The staff was very helpful and made sure you were comfortable."
+      "content": "The bed was very comfortable and really made you feel like you were in your own bed. The staff was very helpful and made sure you were comfortable."
     },
     {
       "role": "user",
@@ -37,7 +38,7 @@
     },
     {
       "role": "assistant",
-      "content": "<think>\n\n</think>\n\nThe Express by Holiday Inn Cambridge offers a full English breakfast, a continental breakfast, and a full English breakfast. The breakfast is free of charge."
+      "content": "The Express by Holiday Inn Cambridge offers a full English breakfast, a continental breakfast, and a full English breakfast. The breakfast is free of charge."
     },
     {
       "role": "user",

@@ -1,10 +1,11 @@
 {
   "metadata": {
+    "custom": "false",
     "persona": "nice",
     "assistant_type": "base",
     "dataset_index": 3,
     "ground_truth": "The Copper Kettle does serve and sell alcohol. One guest said the drinks were cheap, but 3 guests said they felt it was too high priced. I have no information about wine prices specifically.",
-    "predicted": "<think>\n\n</think>\n\nThe Copper Kettle has a limited selection of alcohol, including wine, but the drinks are reasonably priced. Do you have any other questions?"
+    "predicted": "The Copper Kettle has a limited selection of alcohol, including wine, but the drinks are reasonably priced. Do you have any other questions?"
   },
   "conversation": [
     {
@@ -29,7 +30,7 @@
     },
     {
       "role": "assistant",
-      "content": "<think>\n\n</think>\n\nThe Copper Kettle has a limited selection of alcohol, including wine, but the drinks are reasonably priced. Do you have any other questions?"
+      "content": "The Copper Kettle has a limited selection of alcohol, including wine, but the drinks are reasonably priced. Do you have any other questions?"
     },
     {
       "role": "user",

@@ -1,10 +1,11 @@
 {
   "metadata": {
+    "custom": "false",
     "persona": "annoying",
     "assistant_type": "rag",
     "dataset_index": 7,
     "ground_truth": "The reviewers thought that the water pressure at the guest house was weak unfortunately. Is there anything else you need to know?",
-    "predicted": "<think>\n\n</think>\n\nThe Acorn Guest House has a strong water pressure according to one guest. However, there was a comment that the water pressure was low."
+    "predicted": "The Acorn Guest House has a strong water pressure according to one guest. However, there was a comment that the water pressure was low."
   },
   "conversation": [
     {
@@ -61,7 +62,7 @@
     },
     {
       "role": "assistant",
-      "content": "<think>\n\n</think>\n\nThe Acorn Guest House has a strong water pressure according to one guest. However, there was a comment that the water pressure was low."
+      "content": "The Acorn Guest House has a strong water pressure according to one guest. However, there was a comment that the water pressure was low."
     },
     {
       "role": "user",
@@ -69,7 +70,7 @@
     },
     {
       "role": "assistant",
-      "content": "<think>\n\n</think>\n\nThe Acorn Guest House has a strong water pressure according to one guest. However, there was a comment that the water pressure was low."
+      "content": "The Acorn Guest House has a strong water pressure according to one guest. However, there was a comment that the water pressure was low."
     },
     {
       "role": "user",

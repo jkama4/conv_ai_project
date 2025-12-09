@@ -1,10 +1,11 @@
 {
   "metadata": {
+    "custom": "false",
     "persona": "nice",
     "assistant_type": "base",
     "dataset_index": 15,
     "ground_truth": "The Express by Holiday Inn has really comfortable beds, based on the one review I could find about the place.",
-    "predicted": "<think>\n\n</think>\n\nAccording to the reviews I have on hand for that location, the beds there are comfortable and made from really good materials.  Sound good to you?"
+    "predicted": "According to the reviews I have on hand for that location, the beds there are comfortable and made from really good materials.  Sound good to you?"
   },
   "conversation": [
     {
@@ -29,7 +30,7 @@
     },
     {
       "role": "assistant",
-      "content": "<think>\n\n</think>\n\nAccording to the reviews I have on hand for that location, the beds there are comfortable and made from really good materials.  Sound good to you?"
+      "content": "According to the reviews I have on hand for that location, the beds there are comfortable and made from really good materials.  Sound good to you?"
     },
     {
       "role": "user",

@@ -1,10 +1,11 @@
 {
   "metadata": {
+    "custom": "false",
     "persona": "annoying",
     "assistant_type": "base",
     "dataset_index": 16,
     "ground_truth": "According to the reviews I have on hand for this location, the water pressure here is low and could be a lot better.  Sorry to disappoint!",
-    "predicted": "<think>\n\n</think>\n\nSome guests have said that the water pressure was very good and others said that it was very slow."
+    "predicted": "Some guests have said that the water pressure was very good and others said that it was very slow."
   },
   "conversation": [
     {
@@ -29,7 +30,7 @@
     },
     {
       "role": "assistant",
-      "content": "<think>\n\n</think>\n\nSome guests have said that the water pressure was very good and others said that it was very slow."
+      "content": "Some guests have said that the water pressure was very good and others said that it was very slow."
     },
     {
       "role": "user",
@@ -37,7 +38,7 @@
     },
     {
       "role": "assistant",
-      "content": "<think>\n\n</think>\n\nThe Kirkwood house has a few mixed reviews on their water pressure. Some guests say the water was really strong and others say the water pressure was weak. Would you like me to check out a place with better ratings?"
+      "content": "The Kirkwood house has a few mixed reviews on their water pressure. Some guests say the water was really strong and others say the water pressure was weak. Would you like me to check out a place with better ratings?"
     },
     {
       "role": "user",

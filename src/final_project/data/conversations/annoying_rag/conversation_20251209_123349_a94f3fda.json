@@ -1,10 +1,11 @@
 {
   "metadata": {
+    "custom": "false",
     "persona": "annoying",
     "assistant_type": "rag",
     "dataset_index": 11,
     "ground_truth": "The water pressure at the Allenbell is unfortunately one of the negatives as guests have mentioned not having enjoyable shower experiences.",
-    "predicted": "<think>\n\n</think>\n\nThe Allenbell does offer a free WiFi, but the water pressure is not great according to the guest who reviewed it."
+    "predicted": "The Allenbell does offer a free WiFi, but the water pressure is not great according to the guest who reviewed it."
   },
   "conversation": [
     {
@@ -69,7 +70,7 @@
     },
     {
       "role": "assistant",
-      "content": "<think>\n\n</think>\n\nThe Allenbell does offer a free WiFi, but the water pressure is not great according to the guest who reviewed it."
+      "content": "The Allenbell does offer a free WiFi, but the water pressure is not great according to the guest who reviewed it."
     },
     {
       "role": "user",

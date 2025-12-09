@@ -1,10 +1,11 @@
 {
   "metadata": {
+    "custom": "false",
     "persona": "nice",
     "assistant_type": "base",
     "dataset_index": 19,
     "ground_truth": "Unfortunately, the reviewers said that the showers water pressure this week at the guest house. Is there anything else you need to know?",
-    "predicted": "<think>\n\n</think>\n\nThe Acorn Guest House has strong, clean, and hot water. Would you like to know anything else about it?"
+    "predicted": "The Acorn Guest House has strong, clean, and hot water. Would you like to know anything else about it?"
   },
   "conversation": [
     {
@@ -77,7 +78,7 @@
     },
     {
       "role": "assistant",
-      "content": "<think>\n\n</think>\n\nThe Acorn Guest House has strong, clean, and hot water. Would you like to know anything else about it?"
+      "content": "The Acorn Guest House has strong, clean, and hot water. Would you like to know anything else about it?"
     },
     {
       "role": "user",

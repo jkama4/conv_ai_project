@@ -1,10 +1,11 @@
 {
   "metadata": {
+    "custom": "false",
     "persona": "nice",
     "assistant_type": "rag",
     "dataset_index": 1,
     "ground_truth": "According to reviews, the Golden Curry has large portion sizes. Do you want me to book a table for you?",
-    "predicted": "<think>\n\n</think>\n\nYes, the portion sizes at the Golden Curry are large. Past guests have described them as \"excellent\" and \"a lot of food\"."
+    "predicted": "Yes, the portion sizes at the Golden Curry are large. Past guests have described them as \"excellent\" and \"a lot of food\"."
   },
   "conversation": [
     {
@@ -21,7 +22,7 @@
     },
     {
       "role": "assistant",
-      "content": "<think>\n\n</think>\n\nYes, the portion sizes at the Golden Curry are large. Past guests have described them as \"excellent\" and \"a lot of food\"."
+      "content": "Yes, the portion sizes at the Golden Curry are large. Past guests have described them as \"excellent\" and \"a lot of food\"."
     },
     {
       "role": "user",

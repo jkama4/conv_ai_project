@@ -1,10 +1,11 @@
 {
   "metadata": {
+    "custom": "false",
     "persona": "annoying",
     "assistant_type": "rag",
     "dataset_index": 8,
     "ground_truth": "Those that have dined previously at the La Raza restaurant regard its beer quality as being great and a highlight.",
-    "predicted": "<think>\n\n</think>\n\nLa Raza is known to serve high quality drinks including beer. Do you want to make a reservation there?"
+    "predicted": "La Raza is known to serve high quality drinks including beer. Do you want to make a reservation there?"
   },
   "conversation": [
     {
@@ -37,7 +38,7 @@
     },
     {
       "role": "assistant",
-      "content": "<think>\n\n</think>\n\nLa Raza is known to serve high quality drinks including beer. Do you want to make a reservation there?"
+      "content": "La Raza is known to serve high quality drinks including beer. Do you want to make a reservation there?"
     },
     {
       "role": "user",

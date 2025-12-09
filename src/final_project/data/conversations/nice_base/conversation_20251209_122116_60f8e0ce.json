@@ -1,10 +1,11 @@
 {
   "metadata": {
+    "custom": "false",
     "persona": "nice",
     "assistant_type": "base",
     "dataset_index": 12,
     "ground_truth": "Some customers said that the drinks were very high quality, including the stout, the others said they were a bit underwhelming. Do you want to know anything else?",
-    "predicted": "<think>\n\n</think>\n\nThe Midsummer House Restaurant has a limited selection of beer, but the drinks are good. Would you like me to find another restaurant?"
+    "predicted": "The Midsummer House Restaurant has a limited selection of beer, but the drinks are good. Would you like me to find another restaurant?"
   },
   "conversation": [
     {
@@ -53,7 +54,7 @@
     },
     {
       "role": "assistant",
-      "content": "<think>\n\n</think>\n\nThe Midsummer House Restaurant has a limited selection of beer, but the drinks are good. Would you like me to find another restaurant?"
+      "content": "The Midsummer House Restaurant has a limited selection of beer, but the drinks are good. Would you like me to find another restaurant?"
     },
     {
       "role": "user",

@@ -1,10 +1,11 @@
 {
   "metadata": {
+    "custom": "false",
     "persona": "nice",
     "assistant_type": "base",
     "dataset_index": 17,
     "ground_truth": "Guests that have stayed at the Acorn Guest House have said that the water pressure was pretty low and it is nothing to write home about.",
-    "predicted": "<think>\n\n</think>\n\nThe Acorn Guest House has a good water pressure with many guests saying it was strong and fast. Would you like to know more?"
+    "predicted": "The Acorn Guest House has a good water pressure with many guests saying it was strong and fast. Would you like to know more?"
   },
   "conversation": [
     {
@@ -45,7 +46,7 @@
     },
     {
       "role": "assistant",
-      "content": "<think>\n\n</think>\n\nThe Acorn Guest House has a good water pressure with many guests saying it was strong and fast. Would you like to know more?"
+      "content": "The Acorn Guest House has a good water pressure with many guests saying it was strong and fast. Would you like to know more?"
     },
     {
       "role": "user",
@@ -53,7 +54,7 @@
     },
     {
       "role": "assistant",
-      "content": "<think>\n\n</think>\n\nThe breakfast options at the Acorn Guest House include full English/Irish breakfast, vegetarian, vegan, gluten-free, and continental. It is free. The check-in is 3:45 PM, and the check-out is 11:45 AM. There is free parking."
+      "content": "The breakfast options at the Acorn Guest House include full English/Irish breakfast, vegetarian, vegan, gluten-free, and continental. It is free. The check-in is 3:45 PM, and the check-out is 11:45 AM. There is free parking."
     },
     {
       "role": "user",

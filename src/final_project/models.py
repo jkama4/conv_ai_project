@@ -10,7 +10,6 @@ from dataclasses import dataclass
 from typing import Self, Tuple
 
 from . import utils, config
-    
 
 @dataclass
 class AssistantAgentConfig:

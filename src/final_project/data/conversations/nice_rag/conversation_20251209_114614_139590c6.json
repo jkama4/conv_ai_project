@@ -1,10 +1,11 @@
 {
   "metadata": {
+    "custom": "false",
     "persona": "nice",
     "assistant_type": "rag",
     "dataset_index": 14,
     "ground_truth": "The review by a customer who ordered Red Curry said the food was excellent, affordable, and had large portions. Would you like to try them?",
-    "predicted": "<think>\n\n</think>\n\nThe Sala Thong has affordable prices for their food. Would you like to make a reservation there?"
+    "predicted": "The Sala Thong has affordable prices for their food. Would you like to make a reservation there?"
   },
   "conversation": [
     {
@@ -21,7 +22,7 @@
     },
     {
       "role": "assistant",
-      "content": "<think>\n\n</think>\n\nThe Sala Thong has affordable prices for their food. Would you like to make a reservation there?"
+      "content": "The Sala Thong has affordable prices for their food. Would you like to make a reservation there?"
     },
     {
       "role": "user",

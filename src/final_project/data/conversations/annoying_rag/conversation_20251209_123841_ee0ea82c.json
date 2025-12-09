@@ -1,10 +1,11 @@
 {
   "metadata": {
+    "custom": "false",
     "persona": "annoying",
     "assistant_type": "rag",
     "dataset_index": 17,
     "ground_truth": "Guests that have stayed at the Acorn Guest House have said that the water pressure was pretty low and it is nothing to write home about.",
-    "predicted": "<think>\n\n</think>\n\nYes, the water pressure at the Acorn Guest House is very strong and the quality of the water is very clean."
+    "predicted": "Yes, the water pressure at the Acorn Guest House is very strong and the quality of the water is very clean."
   },
   "conversation": [
     {
@@ -45,7 +46,7 @@
     },
     {
       "role": "assistant",
-      "content": "<think>\n\n</think>\n\nYes, the water pressure at the Acorn Guest House is very strong and the quality of the water is very clean."
+      "content": "Yes, the water pressure at the Acorn Guest House is very strong and the quality of the water is very clean."
     },
     {
       "role": "user",

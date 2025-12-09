@@ -1,5 +1,3 @@
-import os
-
 from .user_agent import UserAgent
 from .assistant_agent import BaseAssistantAgent, RAGAssistantAgent
 from .conversational_utils import determine_subject_dir
@@ -7,6 +5,8 @@ from .conversational_utils import determine_subject_dir
 from . import utils, config, data_sets
 
 from typing import List, Dict, Tuple
+
+from datasets import Dataset
 
 
 def run_conversation(
@@ -16,15 +16,8 @@ def run_conversation(
     true_last: Dict,
     n_simulation_turns: int = 5,
 ):
-    """
-    PHASE 1: Predict missing final utterance (ground truth) — one-shot.
-    PHASE 2: Continue multi-turn simulation afterward.
-    """
 
-    # -----------------------------------
-    # PHASE 1 — PREDICT MISSING MESSAGE
     print("PHASE 1 - PREDICTING MISSING MESSAGE")
-    # -----------------------------------
 
     predict_role = true_last["role"]
 
@@ -38,13 +31,9 @@ def run_conversation(
         "content": predicted_text
     }
 
-    # Insert predicted message into history
     history.append(predicted_message)
 
-    # -----------------------------------
-    # PHASE 2 — CONTINUE SIMULATION
     print("PHASE 2 - CONTINUE SIMULATION")
-    # -----------------------------------
 
     current_role = predicted_message["role"]
 
@@ -67,7 +56,10 @@ def run_conversation(
     return history, predicted_message
 
 
-def run_program(n_simulation_turns: int = 5):
+def run_program(
+    ds: Dataset = data_sets.TEST_DS,
+    n_simulation_turns: int = 5,
+):
 
     personas = ["nice", "annoying"]
     assistant_types = ["rag", "base"]
@@ -84,7 +76,7 @@ def run_program(n_simulation_turns: int = 5):
             else:
                 assistant_agent, _ = RAGAssistantAgent._load_finetuned()
 
-            for idx, sample in enumerate(data_sets.TEST_DS):
+            for idx, sample in enumerate(ds):
 
                 subject_dir = determine_subject_dir(
                     persona=persona,
@@ -109,6 +101,7 @@ def run_program(n_simulation_turns: int = 5):
                 )
 
                 metadata = {
+                    "custom": "false" if ds is data_sets.TEST_DS else "true",
                     "persona": persona,
                     "assistant_type": atype,
                     "dataset_index": idx,
@@ -116,16 +109,26 @@ def run_program(n_simulation_turns: int = 5):
                     "predicted": predicted_last["content"],
                 }
 
-                utils.save_conversation(
-                    history=conversation,
-                    subject_dir=subject_dir,
-                    metadata=metadata
-                )
+                # utils.save_conversation(
+                #     history=conversation,
+                #     subject_dir=subject_dir,
+                #     metadata=metadata
+                # )
+
+                print({
+                    "metadata": metadata,
+                    "conversation": conversation
+                })
+
+                break # remove later
 
                 results.append({
                     "metadata": metadata,
                     "conversation": conversation
                 })
+            break # remove later
+    
+        break # remove later
 
     return results
 

@@ -1,10 +1,11 @@
 {
   "metadata": {
+    "custom": "false",
     "persona": "nice",
     "assistant_type": "rag",
     "dataset_index": 19,
     "ground_truth": "Unfortunately, the reviewers said that the showers water pressure this week at the guest house. Is there anything else you need to know?",
-    "predicted": "<think>\n\n</think>\n\nThe shower stream at the Acorn Guest House is generally considered to be very clean and strong. However, there is a comment that it was not strong enough for their needs."
+    "predicted": "The shower stream at the Acorn Guest House is generally considered to be very clean and strong. However, there is a comment that it was not strong enough for their needs."
   },
   "conversation": [
     {
@@ -77,7 +78,7 @@
     },
     {
       "role": "assistant",
-      "content": "<think>\n\n</think>\n\nThe shower stream at the Acorn Guest House is generally considered to be very clean and strong. However, there is a comment that it was not strong enough for their needs."
+      "content": "The shower stream at the Acorn Guest House is generally considered to be very clean and strong. However, there is a comment that it was not strong enough for their needs."
     },
     {
       "role": "user",

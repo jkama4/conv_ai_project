@@ -1,10 +1,11 @@
 {
   "metadata": {
+    "custom": "false",
     "persona": "annoying",
     "assistant_type": "rag",
     "dataset_index": 12,
     "ground_truth": "Some customers said that the drinks were very high quality, including the stout, the others said they were a bit underwhelming. Do you want to know anything else?",
-    "predicted": "<think>\n\n</think>\n\nYes, they do have a nice selection of beer. A past guest said they had a lot of options for beer."
+    "predicted": "Yes, they do have a nice selection of beer. A past guest said they had a lot of options for beer."
   },
   "conversation": [
     {
@@ -53,7 +54,7 @@
     },
     {
       "role": "assistant",
-      "content": "<think>\n\n</think>\n\nYes, they do have a nice selection of beer. A past guest said they had a lot of options for beer."
+      "content": "Yes, they do have a nice selection of beer. A past guest said they had a lot of options for beer."
     },
     {
       "role": "user",

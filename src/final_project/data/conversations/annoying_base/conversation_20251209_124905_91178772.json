@@ -1,10 +1,11 @@
 {
   "metadata": {
+    "custom": "false",
     "persona": "annoying",
     "assistant_type": "base",
     "dataset_index": 13,
     "ground_truth": "Both Curry Prince and Rajmahal have nice views. Would you like to know something more about either of them?",
-    "predicted": "<think>\n\n</think>\n\nThe view at the Rajmahal is a bit limited, but it's nice. The Curry Prince has a really nice view overlooking the ocean. Do you have any other questions?"
+    "predicted": "The view at the Rajmahal is a bit limited, but it's nice. The Curry Prince has a really nice view overlooking the ocean. Do you have any other questions?"
   },
   "conversation": [
     {
@@ -29,7 +30,7 @@
     },
     {
       "role": "assistant",
-      "content": "<think>\n\n</think>\n\nThe view at the Rajmahal is a bit limited, but it's nice. The Curry Prince has a really nice view overlooking the ocean. Do you have any other questions?"
+      "content": "The view at the Rajmahal is a bit limited, but it's nice. The Curry Prince has a really nice view overlooking the ocean. Do you have any other questions?"
     },
     {
       "role": "user",
@@ -37,7 +38,7 @@
     },
     {
       "role": "assistant",
-      "content": "<think>\n\n</think>\n\nBoth restaurants offer good portions of food. The Curry Prince has vegetarian options and the Rajmahal does not."
+      "content": "Both restaurants offer good portions of food. The Curry Prince has vegetarian options and the Rajmahal does not."
     },
     {
       "role": "user",

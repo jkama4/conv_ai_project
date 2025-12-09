@@ -1,10 +1,11 @@
 {
   "metadata": {
+    "custom": "false",
     "persona": "nice",
     "assistant_type": "rag",
     "dataset_index": 11,
     "ground_truth": "The water pressure at the Allenbell is unfortunately one of the negatives as guests have mentioned not having enjoyable shower experiences.",
-    "predicted": "<think>\n\n</think>\n\nThe Allenbell has very good water pressure according to one guest. Do you want to know anything else?"
+    "predicted": "The Allenbell has very good water pressure according to one guest. Do you want to know anything else?"
   },
   "conversation": [
     {
@@ -69,7 +70,7 @@
     },
     {
       "role": "assistant",
-      "content": "<think>\n\n</think>\n\nThe Allenbell has very good water pressure according to one guest. Do you want to know anything else?"
+      "content": "The Allenbell has very good water pressure according to one guest. Do you want to know anything else?"
     },
     {
       "role": "user",

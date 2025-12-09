@@ -1,10 +1,11 @@
 {
   "metadata": {
+    "custom": "false",
     "persona": "nice",
     "assistant_type": "rag",
     "dataset_index": 10,
     "ground_truth": "Alexander Bed and Brrakfast is located outside of town, whereas El Shaddai is in a centeral location and within walking distance of a lot of things.",
-    "predicted": "<think>\n\n</think>\n\nBoth the Alexander Bed and Breakfast and the El Shaddai have mixed reviews on their location. Some people say it's convenient and easy to get to while others say it's far from the city center."
+    "predicted": "Both the Alexander Bed and Breakfast and the El Shaddai have mixed reviews on their location. Some people say it's convenient and easy to get to while others say it's far from the city center."
   },
   "conversation": [
     {
@@ -45,7 +46,7 @@
     },
     {
       "role": "assistant",
-      "content": "<think>\n\n</think>\n\nBoth the Alexander Bed and Breakfast and the El Shaddai have mixed reviews on their location. Some people say it's convenient and easy to get to while others say it's far from the city center."
+      "content": "Both the Alexander Bed and Breakfast and the El Shaddai have mixed reviews on their location. Some people say it's convenient and easy to get to while others say it's far from the city center."
     },
     {
       "role": "user",

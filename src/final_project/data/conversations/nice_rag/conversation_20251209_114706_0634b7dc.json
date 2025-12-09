@@ -1,10 +1,11 @@
 {
   "metadata": {
+    "custom": "false",
     "persona": "nice",
     "assistant_type": "rag",
     "dataset_index": 15,
     "ground_truth": "The Express by Holiday Inn has really comfortable beds, based on the one review I could find about the place.",
-    "predicted": "<think>\n\n</think>\n\nThe beds are extremely comfortable and very soft. The guests have said that they had a good night's sleep and that they were not disturbed by the noises."
+    "predicted": "The beds are extremely comfortable and very soft. The guests have said that they had a good night's sleep and that they were not disturbed by the noises."
   },
   "conversation": [
     {
@@ -29,7 +30,7 @@
     },
     {
       "role": "assistant",
-      "content": "<think>\n\n</think>\n\nThe beds are extremely comfortable and very soft. The guests have said that they had a good night's sleep and that they were not disturbed by the noises."
+      "content": "The beds are extremely comfortable and very soft. The guests have said that they had a good night's sleep and that they were not disturbed by the noises."
     },
     {
       "role": "user",

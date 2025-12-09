@@ -1,10 +1,11 @@
 {
   "metadata": {
+    "custom": "false",
     "persona": "nice",
     "assistant_type": "rag",
     "dataset_index": 6,
     "ground_truth": "All the reviews regarding noise at University Arms Hotel were negative. The reviews at Gonville Hotel were mixed with the room being described as both noisy and quiet. Would you prefer to book the Gonville Hotel?",
-    "predicted": "<think>\n\n</think>\n\nThe Gonville Hotel has a more noisy environment than the University Arms Hotel. Would you like to know more about either of them?"
+    "predicted": "The Gonville Hotel has a more noisy environment than the University Arms Hotel. Would you like to know more about either of them?"
   },
   "conversation": [
     {
@@ -37,7 +38,7 @@
     },
     {
       "role": "assistant",
-      "content": "<think>\n\n</think>\n\nThe Gonville Hotel has a more noisy environment than the University Arms Hotel. Would you like to know more about either of them?"
+      "content": "The Gonville Hotel has a more noisy environment than the University Arms Hotel. Would you like to know more about either of them?"
     },
     {
       "role": "user",

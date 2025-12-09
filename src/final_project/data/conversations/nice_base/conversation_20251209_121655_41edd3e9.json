@@ -1,10 +1,11 @@
 {
   "metadata": {
+    "custom": "false",
     "persona": "nice",
     "assistant_type": "base",
     "dataset_index": 0,
     "ground_truth": "Apparently it does according to previous customers, they say that the view is beautiful especially on the higher floors.",
-    "predicted": "<think>\n\n</think>\n\nYes, the Ashley Hotel has very nice views that are described as exquisite. Would you like to book a room there?"
+    "predicted": "Yes, the Ashley Hotel has very nice views that are described as exquisite. Would you like to book a room there?"
   },
   "conversation": [
     {
@@ -53,7 +54,7 @@
     },
     {
       "role": "assistant",
-      "content": "<think>\n\n</think>\n\nYes, the Ashley Hotel has very nice views that are described as exquisite. Would you like to book a room there?"
+      "content": "Yes, the Ashley Hotel has very nice views that are described as exquisite. Would you like to book a room there?"
     },
     {
       "role": "user",

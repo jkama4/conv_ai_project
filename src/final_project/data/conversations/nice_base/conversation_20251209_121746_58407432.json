@@ -1,10 +1,11 @@
 {
   "metadata": {
+    "custom": "false",
     "persona": "nice",
     "assistant_type": "base",
     "dataset_index": 2,
     "ground_truth": "Yes, Yu Garden does have a very nice area for outdoor dining. Would you like to know more about them?",
-    "predicted": "<think>\n\n</think>\n\nThe Yu Garden has a nice area for outdoor dining. Would you like to know anything else about them?"
+    "predicted": "The Yu Garden has a nice area for outdoor dining. Would you like to know anything else about them?"
   },
   "conversation": [
     {
@@ -37,7 +38,7 @@
     },
     {
       "role": "assistant",
-      "content": "<think>\n\n</think>\n\nThe Yu Garden has a nice area for outdoor dining. Would you like to know anything else about them?"
+      "content": "The Yu Garden has a nice area for outdoor dining. Would you like to know anything else about them?"
     },
     {
       "role": "user",

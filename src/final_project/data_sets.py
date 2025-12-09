@@ -109,4 +109,16 @@ def setup_datasets() -> Tuple[Dataset]:
         ),
     )
 
+def get_custom_dataset() -> Dataset:
+
+    file_path: Path = Path(__file__).parent / "data" / "custom_histories.json"
+
+    with open(file_path, "r") as f:
+
+        data = json.load(f)
+
+    return Dataset.from_list(data)
+
 TRAIN_DS, VALIDATION_DS, TEST_DS = setup_datasets()
+
+CUSTOM_DATASET = get_custom_dataset()

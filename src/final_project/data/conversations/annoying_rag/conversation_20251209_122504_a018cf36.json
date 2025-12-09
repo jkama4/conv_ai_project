@@ -1,10 +1,11 @@
 {
   "metadata": {
+    "custom": "false",
     "persona": "annoying",
     "assistant_type": "rag",
     "dataset_index": 0,
     "ground_truth": "Apparently it does according to previous customers, they say that the view is beautiful especially on the higher floors.",
-    "predicted": "<think>\n\n</think>\n\nThe Ashley hotel has good views. A past guest said that it had a great view of the mountains."
+    "predicted": "The Ashley hotel has good views. A past guest said that it had a great view of the mountains."
   },
   "conversation": [
     {
@@ -53,7 +54,7 @@
     },
     {
       "role": "assistant",
-      "content": "<think>\n\n</think>\n\nThe Ashley hotel has good views. A past guest said that it had a great view of the mountains."
+      "content": "The Ashley hotel has good views. A past guest said that it had a great view of the mountains."
     },
     {
       "role": "user",

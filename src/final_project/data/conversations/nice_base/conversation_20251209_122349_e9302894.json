@@ -1,10 +1,11 @@
 {
   "metadata": {
+    "custom": "false",
     "persona": "nice",
     "assistant_type": "base",
     "dataset_index": 18,
     "ground_truth": "Ashley Hotel has been complimented for its quiet environment, while Lovell Lodge has a few complaints about the noise but others have said the ambiance is nice.",
-    "predicted": "<think>\n\n</think>\n\nYes, they both get high marks for their noise level. Would you like to know more about either of them?"
+    "predicted": "Yes, they both get high marks for their noise level. Would you like to know more about either of them?"
   },
   "conversation": [
     {
@@ -29,7 +30,7 @@
     },
     {
       "role": "assistant",
-      "content": "<think>\n\n</think>\n\nYes, they both get high marks for their noise level. Would you like to know more about either of them?"
+      "content": "Yes, they both get high marks for their noise level. Would you like to know more about either of them?"
     },
     {
       "role": "user",

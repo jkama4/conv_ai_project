@@ -1,10 +1,11 @@
 {
   "metadata": {
+    "custom": "false",
     "persona": "annoying",
     "assistant_type": "rag",
     "dataset_index": 4,
     "ground_truth": "Yes absolutely! The Ashley Hotel and the Lovell Lodge both have great views that will make your stay very relaxing.",
-    "predicted": "<think>\n\n</think>\n\nBoth the Ashley Hotel and the Lovell Lodge have really good views. The Ashley has a really nice view of the forest."
+    "predicted": "Both the Ashley Hotel and the Lovell Lodge have really good views. The Ashley has a really nice view of the forest."
   },
   "conversation": [
     {
@@ -37,7 +38,7 @@
     },
     {
       "role": "assistant",
-      "content": "<think>\n\n</think>\n\nBoth the Ashley Hotel and the Lovell Lodge have really good views. The Ashley has a really nice view of the forest."
+      "content": "Both the Ashley Hotel and the Lovell Lodge have really good views. The Ashley has a really nice view of the forest."
     },
     {
       "role": "user",

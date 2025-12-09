@@ -1,10 +1,11 @@
 {
   "metadata": {
+    "custom": "false",
     "persona": "annoying",
     "assistant_type": "base",
     "dataset_index": 8,
     "ground_truth": "Those that have dined previously at the La Raza restaurant regard its beer quality as being great and a highlight.",
-    "predicted": "<think>\n\n</think>\n\nThe majority of patrons at La Raza say they are disappointed with the quality of their beer, but there are some who were impressed with the prices."
+    "predicted": "The majority of patrons at La Raza say they are disappointed with the quality of their beer, but there are some who were impressed with the prices."
   },
   "conversation": [
     {
@@ -37,7 +38,7 @@
     },
     {
       "role": "assistant",
-      "content": "<think>\n\n</think>\n\nThe majority of patrons at La Raza say they are disappointed with the quality of their beer, but there are some who were impressed with the prices."
+      "content": "The majority of patrons at La Raza say they are disappointed with the quality of their beer, but there are some who were impressed with the prices."
     },
     {
       "role": "user",

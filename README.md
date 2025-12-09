@@ -76,3 +76,7 @@ Robin moet ff maken dan denk ik
 4. Design 10 histories voor initialisation van convo - history geeft een context om mee/vanaf te werken
 5. Stop mechanism - stop wanner user agent satisfied is
 6. Evaluation - LLM-as-judge, Objective metrics (number of tokens, number of turns before completion, etc.)
+
+
+
+# Using objective metrics: number of turns before completion, length of the conversation (number of tokens), etc.

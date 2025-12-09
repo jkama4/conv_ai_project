@@ -1,10 +1,11 @@
 {
   "metadata": {
+    "custom": "false",
     "persona": "nice",
     "assistant_type": "rag",
     "dataset_index": 18,
     "ground_truth": "Ashley Hotel has been complimented for its quiet environment, while Lovell Lodge has a few complaints about the noise but others have said the ambiance is nice.",
-    "predicted": "<think>\n\n</think>\n\nThe Ashley Hotel is generally quiet, but the Lovell Lodge is more noisy. Would you like to know more about either place?"
+    "predicted": "The Ashley Hotel is generally quiet, but the Lovell Lodge is more noisy. Would you like to know more about either place?"
   },
   "conversation": [
     {
@@ -29,7 +30,7 @@
     },
     {
       "role": "assistant",
-      "content": "<think>\n\n</think>\n\nThe Ashley Hotel is generally quiet, but the Lovell Lodge is more noisy. Would you like to know more about either place?"
+      "content": "The Ashley Hotel is generally quiet, but the Lovell Lodge is more noisy. Would you like to know more about either place?"
     },
     {
       "role": "user",

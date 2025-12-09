@@ -1,10 +1,11 @@
 {
   "metadata": {
+    "custom": "false",
     "persona": "annoying",
     "assistant_type": "rag",
     "dataset_index": 14,
     "ground_truth": "The review by a customer who ordered Red Curry said the food was excellent, affordable, and had large portions. Would you like to try them?",
-    "predicted": "<think>\n\n</think>\n\nYes, they do. I've read reviews that state that the prices are reasonable. Would you like me to book it for you?"
+    "predicted": "Yes, they do. I've read reviews that state that the prices are reasonable. Would you like me to book it for you?"
   },
   "conversation": [
     {
@@ -21,7 +22,7 @@
     },
     {
       "role": "assistant",
-      "content": "<think>\n\n</think>\n\nYes, they do. I've read reviews that state that the prices are reasonable. Would you like me to book it for you?"
+      "content": "Yes, they do. I've read reviews that state that the prices are reasonable. Would you like me to book it for you?"
     },
     {
       "role": "user",

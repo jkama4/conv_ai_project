@@ -1,10 +1,11 @@
 {
   "metadata": {
+    "custom": "false",
     "persona": "annoying",
     "assistant_type": "rag",
     "dataset_index": 19,
     "ground_truth": "Unfortunately, the reviewers said that the showers water pressure this week at the guest house. Is there anything else you need to know?",
-    "predicted": "<think>\n\n</think>\n\nThe Acorn Guest House has a strong, clean, and comfortable bathroom. The bathroom was also very clean."
+    "predicted": "The Acorn Guest House has a strong, clean, and comfortable bathroom. The bathroom was also very clean."
   },
   "conversation": [
     {
@@ -77,7 +78,7 @@
     },
     {
       "role": "assistant",
-      "content": "<think>\n\n</think>\n\nThe Acorn Guest House has a strong, clean, and comfortable bathroom. The bathroom was also very clean."
+      "content": "The Acorn Guest House has a strong, clean, and comfortable bathroom. The bathroom was also very clean."
     },
     {
       "role": "user",
@@ -85,7 +86,7 @@
     },
     {
       "role": "assistant",
-      "content": "<think>\n\n</think>\n\nThe Acorn Guest House has a strong, clean, and comfortable bathroom. The bathroom was also very clean."
+      "content": "The Acorn Guest House has a strong, clean, and comfortable bathroom. The bathroom was also very clean."
     },
     {
       "role": "user",

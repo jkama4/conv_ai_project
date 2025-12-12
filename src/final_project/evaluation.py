@@ -5,7 +5,8 @@ from typing import Dict, Tuple, List
 from openai import OpenAI
 from sacrebleu.metrics import BLEU
 from rouge import Rouge
-from evaluate import load
+
+from torchmetrics.text.bert import BERTScore
 
 from . import constants
 from .pd_models import LLMAsJudgeFormat
@@ -34,8 +35,9 @@ def gather_objective_data(
     )
 
     return {
-        "turns_before_completion_incl_history": len(convo),
-        "turns_before_completion_excl_histroy": len(completion),
+        "total_turns": len(convo),
+        "turns_history_only": len(convo) - len(completion),
+        "turns_completion_only": len(completion),
         "assistant_tokens": assistant_tokens,
         "user_tokens": user_tokens,
         "bleu_score": bleu,
@@ -79,15 +81,11 @@ def compute_bertscore(
     ref: str,
 ) -> float:
     
-    bertscore = load("bertscore")
+    bertscore = BERTScore()
 
-    results = bertscore.compute(
-        predictions=pred, 
-        references=ref, 
-        lang="en"
-    )
+    score = bertscore(pred, ref)
 
-    return results
+    return score
 
 
 def eval_answers(
@@ -123,7 +121,10 @@ def calc_tokens(
 def gather_subjective_data(
     convo_data: Dict
 ) -> Dict:
+    
     convo: List[Dict] = convo_data["conversation"]
+    pred_sentence: str = convo_data["metadata"]["predicted"]
+    gt_sentence: str = convo_data["metadata"]["ground_truth"]
     
     client: OpenAI = OpenAI(api_key=os.getenv("OPENAI_API_KEY", ""))
     response = client.responses.parse(
@@ -131,11 +132,21 @@ def gather_subjective_data(
         input=[
             {
                 "role": "system",
-                "content": constants.LLM_JUDGE_INSTRUCTION,
+                "content": (
+                    f"{constants.LLM_JUDGE_INSTRUCTION}"
+                    "The following example conversation " 
+                    "is an example of a conversation with " ""
+                    "a high task success score (0.8 - 1.0): \n\n"
+                    f"{constants.HIGH_SUCCESS_RATE_EXAMPLE}"
+                )
             },
             {
                 "role": "user",
-                "content": f"Evaluate the following conversation: {convo}"
+                "content": (
+                    f"Evaluate the following conversation: {convo}"
+                    f"PREDICTED SENTENCE: {pred_sentence}"
+                    f"GROUND TRUTH: {gt_sentence}"
+                )
             },
         ],
         text_format=LLMAsJudgeFormat,
@@ -147,5 +158,6 @@ def gather_subjective_data(
         "task_success_score": data.task_succes_score,
         "coherence_score": data.coherence_score,
         "pleasentness_score": data.pleasentness_score,
+        "prediction_score": data.prediction_score,
         "explanation": data.explanation,
     }

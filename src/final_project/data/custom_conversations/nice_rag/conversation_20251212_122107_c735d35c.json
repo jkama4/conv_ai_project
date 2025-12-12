@@ -1,0 +1,32 @@
+{
+  "metadata": {
+    "custom": "true",
+    "persona": "nice",
+    "assistant_type": "rag",
+    "dataset_index": 2,
+    "ground_truth": "Their Dragon Roll is the top favorite—tempura shrimp, avocado, and unagi sauce. Want the estimated delivery time for your area?",
+    "predicted": "<think>\n\n</think>\n\nThe Sakura Bento offers a variety of rolls, but one of the most popular is the Taro Rolls. Would you like to know more about them?"
+  },
+  "conversation": [
+    {
+      "content": "Is there a sushi restaurant that offers delivery near me?",
+      "role": "user"
+    },
+    {
+      "content": "Sakura Bento offers delivery within most neighborhoods and has great reviews for freshness. They deliver until 10 PM. Would you like to know their most popular dishes?",
+      "role": "assistant"
+    },
+    {
+      "content": "Yes, what's their most recommended roll?",
+      "role": "user"
+    },
+    {
+      "role": "assistant",
+      "content": "<think>\n\n</think>\n\nThe Sakura Bento offers a variety of rolls, but one of the most popular is the Taro Rolls. Would you like to know more about them?"
+    },
+    {
+      "role": "user",
+      "content": "Nice choice—the Taro Roll is a popular pick. It typically features taro-root creaminess with avocado and fresh fish, finished with a light glaze. I’ll check Sakura Bento’s delivery window to your hotel for you. <END> bye"
+    }
+  ]
+}

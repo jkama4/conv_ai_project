@@ -1,0 +1,32 @@
+{
+  "metadata": {
+    "custom": "true",
+    "persona": "annoying",
+    "assistant_type": "rag",
+    "dataset_index": 2,
+    "ground_truth": "Their Dragon Roll is the top favorite—tempura shrimp, avocado, and unagi sauce. Want the estimated delivery time for your area?",
+    "predicted": "<think>\n\n</think>\n\nI'm not sure what kind of roll it is, but the reviews are mixed. Some customers said the rolls were good, and others said they were average."
+  },
+  "conversation": [
+    {
+      "content": "Is there a sushi restaurant that offers delivery near me?",
+      "role": "user"
+    },
+    {
+      "content": "Sakura Bento offers delivery within most neighborhoods and has great reviews for freshness. They deliver until 10 PM. Would you like to know their most popular dishes?",
+      "role": "assistant"
+    },
+    {
+      "content": "Yes, what's their most recommended roll?",
+      "role": "user"
+    },
+    {
+      "role": "assistant",
+      "content": "<think>\n\n</think>\n\nI'm not sure what kind of roll it is, but the reviews are mixed. Some customers said the rolls were good, and others said they were average."
+    },
+    {
+      "role": "user",
+      "content": "That won't work—I'm asking for Sakura Bento's top recommended roll, not a vague mix of reviews. Like I said before, give me a real pick, or name a different place with a clearly standout roll. \n\nOtherwise what's the point—which nearby sushi place actually delivers reliably and has a signature roll people love? \n<END> bye"
+    }
+  ]
+}

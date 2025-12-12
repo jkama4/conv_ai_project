@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "custom": "true",
+    "persona": "annoying",
+    "assistant_type": "base",
+    "dataset_index": 5,
+    "ground_truth": "They charge a flat €25 pet fee per stay, not per night. I can also check their availability if you share travel dates.",
+    "predicted": "<think>\n\n</think>\n\nThe Mozart Suite Hotel charges 10 GBP per night to their guests for the use of the pet bed."
+  },
+  "conversation": [
+    {
+      "content": "Are there any pet-friendly hotels in Vienna?",
+      "role": "user"
+    },
+    {
+      "content": "Yes! The Mozart Suites allow pets of all sizes and even provide pet beds on request. There's a small cleaning fee. Want to know nearby parks?",
+      "role": "assistant"
+    },
+    {
+      "content": "Do they charge extra per night for pets?",
+      "role": "user"
+    },
+    {
+      "role": "assistant",
+      "content": "<think>\n\n</think>\n\nThe Mozart Suite Hotel charges 10 GBP per night to their guests for the use of the pet bed."
+    },
+    {
+      "role": "user",
+      "content": "That won't work—£10 a night for a pet bed is ridiculous, I already told you I want transparent rates with no hidden charges. Like I said before, are there any Vienna hotels with truly no pet fees at all, or at least pet amenities folded into the room price? If not, what would be the total cost for a 3-night stay with this surcharge?"
+    },
+    {
+      "role": "assistant",
+      "content": "I'm sorry, I don't have any hotels in the city that don't charge a fee for pets. Would you like to try a different search?"
+    },
+    {
+      "role": "user",
+      "content": "That won't work—like I told you, we already went over this, I want transparent rates with no hidden pet charges, and \"no options\" isn't acceptable. If any Vienna hotels actually include pet amenities in the price, show me the total for 3 nights; otherwise, recommend a nearby city with clearly priced pet-friendly options. <END> bye"
+    }
+  ]
+}

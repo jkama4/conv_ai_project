@@ -1,0 +1,32 @@
+{
+  "metadata": {
+    "custom": "true",
+    "persona": "nice",
+    "assistant_type": "rag",
+    "dataset_index": 4,
+    "ground_truth": "Yes, it’s on the higher end. Expect €40–€60 per main dish. They do offer a 3-course prix fixe menu. Want me to check if reservations are needed?",
+    "predicted": "Yes it is."
+  },
+  "conversation": [
+    {
+      "content": "I'm planning a romantic dinner. Any restaurant with a nice view?",
+      "role": "user"
+    },
+    {
+      "content": "Skyline Terrace might be perfect—it’s on the 15th floor and overlooks the river. They serve modern European cuisine. Should I tell you their dress code?",
+      "role": "assistant"
+    },
+    {
+      "content": "Is it expensive?",
+      "role": "user"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes it is."
+    },
+    {
+      "role": "user",
+      "content": "Thanks for confirming—that helps. Since Skyline Terrace is pricey, I can look for a couple of romantic river-view options that are more budget-friendly, or keep Skyline as the main plan and balance the evening accordingly. bye <END>"
+    }
+  ]
+}

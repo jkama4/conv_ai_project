@@ -1,0 +1,32 @@
+{
+  "metadata": {
+    "custom": "true",
+    "persona": "annoying",
+    "assistant_type": "rag",
+    "dataset_index": 5,
+    "ground_truth": "They charge a flat €25 pet fee per stay, not per night. I can also check their availability if you share travel dates.",
+    "predicted": "The fee is 50 GBP per night. Do you want to book a room?"
+  },
+  "conversation": [
+    {
+      "content": "Are there any pet-friendly hotels in Vienna?",
+      "role": "user"
+    },
+    {
+      "content": "Yes! The Mozart Suites allow pets of all sizes and even provide pet beds on request. There's a small cleaning fee. Want to know nearby parks?",
+      "role": "assistant"
+    },
+    {
+      "content": "Do they charge extra per night for pets?",
+      "role": "user"
+    },
+    {
+      "role": "assistant",
+      "content": "The fee is 50 GBP per night. Do you want to book a room?"
+    },
+    {
+      "role": "user",
+      "content": "That won't work—the 50 GBP per night figure for Vienna is suspect; I already told you Vienna uses euros and taxes can push the total higher. I need pet-friendly places with transparent all-in pricing and no hidden fees. If Mozart Suites can't quote a clear EUR total including pet fee and taxes, you're not listening and I won't book. bye <END>"
+    }
+  ]
+}

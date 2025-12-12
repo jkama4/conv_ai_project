@@ -1,0 +1,32 @@
+{
+  "metadata": {
+    "custom": "true",
+    "persona": "annoying",
+    "assistant_type": "base",
+    "dataset_index": 9,
+    "ground_truth": "They do—babysitting can be booked 24 hours in advance through the concierge. Would you like the nightly room rates?",
+    "predicted": "Sorry, there is no babysitting service at this hotel. Do you have any other questions?"
+  },
+  "conversation": [
+    {
+      "content": "Is there a family-friendly hotel with a pool in Lisbon?",
+      "role": "user"
+    },
+    {
+      "content": "Yes! The OceanView Resort has a large outdoor pool, kids’ activities, and family rooms. It’s near the beach too. Want more info about the kids’ facilities?",
+      "role": "assistant"
+    },
+    {
+      "content": "Do they offer babysitting services?",
+      "role": "user"
+    },
+    {
+      "role": "assistant",
+      "content": "Sorry, there is no babysitting service at this hotel. Do you have any other questions?"
+    },
+    {
+      "role": "user",
+      "content": "That won't work—I've already told you OceanView isn't in Lisbon, so it's not a usable option. I need a Lisbon hotel with a pool and babysitting or a kids’ club. I already told you; what are your dates, budget, and do you want central Lisbon or a beachfront area? <END>"
+    }
+  ]
+}

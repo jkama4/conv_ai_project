@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "custom": "true",
+    "persona": "annoying",
+    "assistant_type": "base",
+    "dataset_index": 0,
+    "ground_truth": "Yes, quite a few! They offer vegetarian lasagna, pesto gnocchi, grilled vegetable pizzas, and several salads. Want me to check their busiest hours?",
+    "predicted": "No, La Trattoria doesn't have vegetarian options. Would you like to make a reservation?"
+  },
+  "conversation": [
+    {
+      "content": "Hi, can you recommend a good Italian restaurant near the city center?",
+      "role": "user"
+    },
+    {
+      "content": "Sure! La Trattoria Napoli is a popular Italian restaurant located just a 5-minute walk from the city center. They’re known for homemade pasta and wood-fired pizzas. Would you like price or reservation details?",
+      "role": "assistant"
+    },
+    {
+      "content": "Do they have vegetarian options?",
+      "role": "user"
+    },
+    {
+      "role": "assistant",
+      "content": "No, La Trattoria doesn't have vegetarian options. Would you like to make a reservation?"
+    },
+    {
+      "role": "user",
+      "content": "Like I said before, I need vegetarian options. That La Trattoria pick won’t work—do you have any vegetarian-friendly Italian spots within a 10-minute walk of the city center, with vegan options and open reservations?"
+    },
+    {
+      "role": "assistant",
+      "content": "I'm sorry, there are no Italian restaurants in the centre that serve vegetarian options. Would you like to try a different area of town?"
+    },
+    {
+      "role": "user",
+      "content": "That won't work—like I said before, I need vegetarian options, and you say there aren't any Italian spots in the center. You're not listening—we already went over this, so should I widen the search to vegetarian-friendly Italian just outside the center, or switch to another cuisine with vegan options within a 10-minute walk?"
+    },
+    {
+      "role": "assistant",
+      "content": "I would recommend the pizza hut fen ditton. They serve vegetarian options. Would you like me to make a reservation for you?"
+    },
+    {
+      "role": "user",
+      "content": "That won't work—Pizza Hut Fen Ditton isn't within a 10-minute walk of the city center, and it's not a proper Italian option with vegan dishes. Like I told you before, I need vegetarian options from an Italian spot nearby, or a different cuisine with vegan options and open reservations. Stop offering faraway chains—give me a realistic close-by Italian or clearly vegan-friendly restaurant. <END> bye"
+    }
+  ]
+}

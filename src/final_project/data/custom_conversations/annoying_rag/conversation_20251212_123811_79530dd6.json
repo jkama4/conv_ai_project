@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "custom": "true",
+    "persona": "annoying",
+    "assistant_type": "rag",
+    "dataset_index": 7,
+    "ground_truth": "Yes, the shuttle runs 24/7. Late-night pickups are on demand, so you just call when you land. Need help finding alternative airport hotels?",
+    "predicted": "<think>\n\n</think>\n\nYes, the Airport Inn Express offers a shuttle service that runs late at night. One guest said that the shuttle was late."
+  },
+  "conversation": [
+    {
+      "content": "I need a hotel near the airport with a shuttle service.",
+      "role": "user"
+    },
+    {
+      "content": "Airport Inn Express offers a free shuttle every 30 minutes. Rooms start at $110 per night and include breakfast. Would you like to know shuttle operating hours?",
+      "role": "assistant"
+    },
+    {
+      "content": "Does it run late at night?",
+      "role": "user"
+    },
+    {
+      "role": "assistant",
+      "content": "<think>\n\n</think>\n\nYes, the Airport Inn Express offers a shuttle service that runs late at night. One guest said that the shuttle was late."
+    },
+    {
+      "role": "user",
+      "content": "That won't work—“late night” isn’t a real schedule, I need exact hours. We already went over this: what time does your flight land so I can verify if the Airport Inn Express actually runs at that hour, or if we need a 24-hour shuttle option? If not, give me hotels near the airport with guaranteed 24/7 shuttle or on-demand transfers."
+    },
+    {
+      "role": "assistant",
+      "content": "I'm sorry, the shuttle service at the Airport Inn is not available for late nights. Would you like me to find another place with that service?"
+    },
+    {
+      "role": "user",
+      "content": "That won't work—24/7 shuttle or on-demand transfers are non-negotiable for me, not vague promises.\nI already told you I need exact hours tied to my flight; you should confirm guaranteed service before suggesting “near the airport” options.\n<END> bye"
+    }
+  ]
+}

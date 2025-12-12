@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "custom": "true",
+    "persona": "nice",
+    "assistant_type": "base",
+    "dataset_index": 2,
+    "ground_truth": "Their Dragon Roll is the top favorite—tempura shrimp, avocado, and unagi sauce. Want the estimated delivery time for your area?",
+    "predicted": "<think>\n\n</think>\n\nThe most recommended roll at Sakura Bento is the rolls served with a variety of toppings. Would you like to know more about them?"
+  },
+  "conversation": [
+    {
+      "content": "Is there a sushi restaurant that offers delivery near me?",
+      "role": "user"
+    },
+    {
+      "content": "Sakura Bento offers delivery within most neighborhoods and has great reviews for freshness. They deliver until 10 PM. Would you like to know their most popular dishes?",
+      "role": "assistant"
+    },
+    {
+      "content": "Yes, what's their most recommended roll?",
+      "role": "user"
+    },
+    {
+      "role": "assistant",
+      "content": "<think>\n\n</think>\n\nThe most recommended roll at Sakura Bento is the rolls served with a variety of toppings. Would you like to know more about them?"
+    },
+    {
+      "role": "user",
+      "content": "Thanks for checking in—those multi-topping rolls are the crowd-pleasers, with lots of textures and a flavorful drizzle. I can pull up the exact dish name and ingredients if you’d like. Going back to what we discussed about your trip, is Sakura Bento convenient for meals near your hotel, or would you prefer a sushi spot within walking distance from your accommodation?"
+    },
+    {
+      "role": "assistant",
+      "content": "<think>\n\n</think>\n\nThe Sakura Bento is in a great location which is very convenient for the customers. You can walk to the place easily."
+    },
+    {
+      "role": "user",
+      "content": "Going back to what we discussed, Sakura Bento being within walking distance of the hotel sounds ideal—thank you for checking. Could you pull up 2–3 additional sushi spots within a 15-minute walk, including delivery hours and their top rolls, so I have backups?"
+    },
+    {
+      "role": "assistant",
+      "content": "There are 4 restaurants that are in the same area. The other 3 are Nishikiya, Kakuza, and Wagamama. The Nishikiya and Kakuza both offer delivery. The Nishikiya serves Japanese food while the Kakuza serves modern european."
+    },
+    {
+      "role": "user",
+      "content": "That helps, thank you. Could you pull 2–3 more sushi spots within a 15-minute walk from the same hotel area, including delivery hours and their top rolls? If you have notes on price range or dine-in versus delivery, that’d be great."
+    }
+  ]
+}

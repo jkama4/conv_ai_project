@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "custom": "true",
+    "persona": "nice",
+    "assistant_type": "base",
+    "dataset_index": 6,
+    "ground_truth": "Not required, but highly recommended during dinner hours. They also offer online booking if that's convenient.",
+    "predicted": "Yes, you will need to make a reservation.  What day and time would you like to book?"
+  },
+  "conversation": [
+    {
+      "content": "Can you recommend a restaurant that serves gluten-free meals?",
+      "role": "user"
+    },
+    {
+      "content": "Absolutely! GreenFork Bistro has an extensive gluten-free menu including pasta, breads, and desserts. They’re known for careful cross-contamination practices. Want to hear customer favorites?",
+      "role": "assistant"
+    },
+    {
+      "content": "Are reservations required?",
+      "role": "user"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, you will need to make a reservation.  What day and time would you like to book?"
+    },
+    {
+      "role": "user",
+      "content": "Thanks, I'll book Friday at 7:30 PM at GreenFork Bistro. Going back to what we discussed about hotels, would you like me to look for options within a 10-minute walk of the restaurant, or near a different area?"
+    },
+    {
+      "role": "assistant",
+      "content": "I have 4 hotels that are in the same area as the restaurant, do you have a price range in mind?"
+    },
+    {
+      "role": "user",
+      "content": "Thank you—that's helpful. I'm aiming for about $150-210 per night within a 10-minute walk of GreenFork Bistro—should I filter refundable options in that range and share the top 2-3?"
+    },
+    {
+      "role": "assistant",
+      "content": "I have the huntingdon marriott hotel, the university arms hotel, and the university arms hotel.  Would you like me to book one of these for you?"
+    },
+    {
+      "role": "user",
+      "content": "Great idea—thanks, I'll filter refundable options in the $150-210 range within a 10-minute walk of GreenFork Bistro and share the top 2-3. Right now, University Arms Hotel is the strongest match—refundable and typically around $165-190, within about an 8–9 minute walk. Would you like me to include Huntingdon Marriott as a backup if you’re open to a longer stroll or a quick ride, or should I widen the search to a 15-minute radius?"
+    }
+  ]
+}

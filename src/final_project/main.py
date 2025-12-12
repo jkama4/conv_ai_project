@@ -2,7 +2,7 @@ from .user_agent import UserAgent
 from .assistant_agent import BaseAssistantAgent, RAGAssistantAgent
 from .conversational_utils import determine_subject_dir
 
-from . import utils, config, data_sets
+from . import utils, config, data_sets, evaluation
 
 from typing import List, Dict, Tuple
 
@@ -15,7 +15,7 @@ def run_conversation(
     assistant_agent: BaseAssistantAgent,
     true_last: Dict,
     n_simulation_turns: int = 5,
-):
+) -> Tuple[List[Dict], str] :
 
     print("PHASE 1 - PREDICTING MISSING MESSAGE")
 
@@ -59,7 +59,8 @@ def run_conversation(
 def run_program(
     ds: Dataset = data_sets.TEST_DS,
     n_simulation_turns: int = 5,
-):
+    custom: bool = False,
+) -> List[Dict]:
 
     personas = ["nice", "annoying"]
     assistant_types = ["rag", "base"]
@@ -85,7 +86,7 @@ def run_program(
                 print(f"CONVERSATION between \'{user_agent.persona} user\' and \'{type(assistant_agent)} based assistant\'")
                 
                 if idx >= 20:
-                    print("Reached limit of 2 samples. Moving to next configuration.\n")
+                    print("Reached limit of 20 samples. Moving to next configuration.\n")
                     break
                 
                 full_messages = sample["messages"]
@@ -112,7 +113,8 @@ def run_program(
                 utils.save_conversation(
                     history=conversation,
                     subject_dir=subject_dir,
-                    metadata=metadata
+                    metadata=metadata,
+                    custom=custom,
                 )
 
                 print({
@@ -127,5 +129,36 @@ def run_program(
                 })
     
     return results
+
+
+def run_evaluation(
+    custom: bool = False
+) -> List[Dict]:
+    
+    conversations: List[Dict] = utils.get_conversations(
+        custom=custom
+    )
+    
+    evaluated_conversations: List[Dict] = []
+
+    for convo_data in conversations:
+
+        objective_data: Dict = evaluation.gather_objective_data(
+            convo_data=convo_data
+        )
+
+        subjective_data: Dict = evaluation.gather_subjective_data(
+            convo_data=convo_data
+        )
+
+        convo_data["objective_data"] = objective_data
+        convo_data["subjective_data"] = subjective_data
+
+        print("DATA TO BE ADDED:", convo_data)
+
+        evaluated_conversations.append(convo_data)
+
+    return evaluated_conversations
+
 
 

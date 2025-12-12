@@ -1,0 +1,32 @@
+{
+  "metadata": {
+    "custom": "true",
+    "persona": "annoying",
+    "assistant_type": "base",
+    "dataset_index": 6,
+    "ground_truth": "Not required, but highly recommended during dinner hours. They also offer online booking if that's convenient.",
+    "predicted": "Yes, you will need to make a reservation at the GreenFork Bistro. Do you have any other questions?"
+  },
+  "conversation": [
+    {
+      "content": "Can you recommend a restaurant that serves gluten-free meals?",
+      "role": "user"
+    },
+    {
+      "content": "Absolutely! GreenFork Bistro has an extensive gluten-free menu including pasta, breads, and desserts. They’re known for careful cross-contamination practices. Want to hear customer favorites?",
+      "role": "assistant"
+    },
+    {
+      "content": "Are reservations required?",
+      "role": "user"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, you will need to make a reservation at the GreenFork Bistro. Do you have any other questions?"
+    },
+    {
+      "role": "user",
+      "content": "That won't work—like I said before, I need options that won't force me into a reservation every time. We already went over GreenFork; what about other gluten-free restaurants nearby that take walk-ins or have flexible hours? <END> bye"
+    }
+  ]
+}

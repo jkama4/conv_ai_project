@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "custom": "true",
+    "persona": "annoying",
+    "assistant_type": "rag",
+    "dataset_index": 1,
+    "ground_truth": "Yes, the gym has treadmills, ellipticals, rowing machines, and free weights. Let me know if you'd like details on spa access as well!",
+    "predicted": "<think>\n\n</think>\n\nYes, the gym at the CanalSide Hotel includes cardio machines. Would you like to know more about the hotel?"
+  },
+  "conversation": [
+    {
+      "content": "I'm looking for a hotel with a gym in Amsterdam. Any suggestions?",
+      "role": "user"
+    },
+    {
+      "content": "The CanalSide Hotel has a well-equipped 24/7 gym and is located near the central station. Rooms start around €140 per night. Should I check if they have availability for your dates?",
+      "role": "assistant"
+    },
+    {
+      "content": "Does the gym include cardio machines?",
+      "role": "user"
+    },
+    {
+      "role": "assistant",
+      "content": "<think>\n\n</think>\n\nYes, the gym at the CanalSide Hotel includes cardio machines. Would you like to know more about the hotel?"
+    },
+    {
+      "role": "user",
+      "content": "That won't work if the cardio setup isn't 24/7 and actually has a real treadmill and cross-trainer—does CanalSide have that? Like I said before, is it near the central station and are there dependable restaurants within walking distance that take reservations?"
+    },
+    {
+      "role": "assistant",
+      "content": "<think>\n\n</think>\n\nYes, the gym at the CanalSide Hotel is said to have cardio equipment. It's also in a great location near the city center."
+    },
+    {
+      "role": "user",
+      "content": "That won’t work if the cardio setup isn’t truly 24/7 with a real treadmill and cross-trainer—can CanalSide confirm those specs? Like I said before, is it actually within walking distance to Amsterdam Central Station, and what dependable restaurants within a 10–15 minute walk take reservations? <END>"
+    }
+  ]
+}

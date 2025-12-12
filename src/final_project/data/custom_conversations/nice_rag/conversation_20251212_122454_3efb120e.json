@@ -1,0 +1,32 @@
+{
+  "metadata": {
+    "custom": "true",
+    "persona": "nice",
+    "assistant_type": "rag",
+    "dataset_index": 8,
+    "ground_truth": "Mains range from €25–€45 depending on the cut. They also offer a weekday lunch special if you're looking for something more affordable.",
+    "predicted": "<think>\n\n</think>\n\nThe Prime Grill is considered to be a decent price for the food. Would you like to know more about them?"
+  },
+  "conversation": [
+    {
+      "content": "Where can I find a steakhouse with outdoor seating?",
+      "role": "user"
+    },
+    {
+      "content": "Prime Grill has a heated outdoor terrace and serves high-quality steaks and wine. It's great for evening dining. Want to know typical wait times?",
+      "role": "assistant"
+    },
+    {
+      "content": "How pricey is it?",
+      "role": "user"
+    },
+    {
+      "role": "assistant",
+      "content": "<think>\n\n</think>\n\nThe Prime Grill is considered to be a decent price for the food. Would you like to know more about them?"
+    },
+    {
+      "role": "user",
+      "content": "Thanks—that's helpful. Going back to what we discussed, Prime Grill seems like a solid value for steaks with an outdoor seating terrace. That price point, paired with nearby lodging, could make for a convenient evening if I can find a hotel within a short walk after dinner. <END> bye"
+    }
+  ]
+}

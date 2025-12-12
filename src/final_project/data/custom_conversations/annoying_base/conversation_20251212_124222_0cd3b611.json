@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "custom": "true",
+    "persona": "annoying",
+    "assistant_type": "base",
+    "dataset_index": 4,
+    "ground_truth": "Yes, it’s on the higher end. Expect €40–€60 per main dish. They do offer a 3-course prix fixe menu. Want me to check if reservations are needed?",
+    "predicted": "Yes, it is expensive.  Would you like me to check another restaurant?"
+  },
+  "conversation": [
+    {
+      "content": "I'm planning a romantic dinner. Any restaurant with a nice view?",
+      "role": "user"
+    },
+    {
+      "content": "Skyline Terrace might be perfect—it’s on the 15th floor and overlooks the river. They serve modern European cuisine. Should I tell you their dress code?",
+      "role": "assistant"
+    },
+    {
+      "content": "Is it expensive?",
+      "role": "user"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, it is expensive.  Would you like me to check another restaurant?"
+    },
+    {
+      "role": "user",
+      "content": "That won’t work—I already told you I’m not paying premium prices just for a view. We already went over this: find me a rooftop restaurant with a river view at a reasonable price, not Skyline Terrace. And since we’re picking a place, what hotel within walking distance to that area would minimize transport?"
+    },
+    {
+      "role": "assistant",
+      "content": "There is a moderately priced restaurant called Restaurant Alimentum that has an excellent view."
+    },
+    {
+      "role": "user",
+      "content": "That won't work—Alimentum isn't rooftop, and you asked for rooftop with a river view at a reasonable price, like I said before. We already went over this; what city are we in, and what's your hotel budget per night so I can find walkable options near that area?"
+    },
+    {
+      "role": "assistant",
+      "content": "I'm sorry I'm not sure what you're asking. Would you like to try a different type of food?"
+    },
+    {
+      "role": "user",
+      "content": "That won't work—I already told you I want a rooftop with a river view at a reasonable price, like I said before. We already went over this: what city are we in, and what's your hotel budget per night so I can find walkable options near that area? I’m not chasing random suggestions—stick to rooftop river views and a sensible budget."
+    }
+  ]
+}

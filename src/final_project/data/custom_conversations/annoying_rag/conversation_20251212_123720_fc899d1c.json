@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "custom": "true",
+    "persona": "annoying",
+    "assistant_type": "rag",
+    "dataset_index": 6,
+    "ground_truth": "Not required, but highly recommended during dinner hours. They also offer online booking if that's convenient.",
+    "predicted": "Yes, you will need to make a reservation at Green Fork Bistro. Is there anything else you'd like to know about them?"
+  },
+  "conversation": [
+    {
+      "content": "Can you recommend a restaurant that serves gluten-free meals?",
+      "role": "user"
+    },
+    {
+      "content": "Absolutely! GreenFork Bistro has an extensive gluten-free menu including pasta, breads, and desserts. They’re known for careful cross-contamination practices. Want to hear customer favorites?",
+      "role": "assistant"
+    },
+    {
+      "content": "Are reservations required?",
+      "role": "user"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, you will need to make a reservation at Green Fork Bistro. Is there anything else you'd like to know about them?"
+    },
+    {
+      "role": "user",
+      "content": "That won't work; I already told you I need gluten-free options near my hotel, not just some reservation-heavy spot. Are there other gluten-free-friendly restaurants within a short walk of a good hotel, or should we focus on hotels with on-site dining that can guarantee no cross-contamination?"
+    },
+    {
+      "role": "assistant",
+      "content": "The only option that meets your needs is the restaurant named Golden Wok."
+    },
+    {
+      "role": "user",
+      "content": "That won't work; I already told you I need gluten-free options within walking distance of a hotel, not just a reservation-heavy spot. If Golden Wok is your pick, at least state which hotel it's near and whether they can guarantee gluten-free prep—I shouldn't have to chase this down. <END> bye"
+    }
+  ]
+}

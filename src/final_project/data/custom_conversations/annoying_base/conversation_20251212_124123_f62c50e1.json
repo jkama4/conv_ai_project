@@ -1,0 +1,32 @@
+{
+  "metadata": {
+    "custom": "true",
+    "persona": "annoying",
+    "assistant_type": "base",
+    "dataset_index": 3,
+    "ground_truth": "Yes, a simple continental breakfast is included. They offer pastries, fruit, cereal, and coffee. Would you like to compare it with another budget option?",
+    "predicted": "<think>\n\n</think>\n\nYes, those that have previously stayed at the Hotel Solmar have mentioned that they enjoyed the breakfast."
+  },
+  "conversation": [
+    {
+      "content": "Can you help me find a budget hotel in Barcelona?",
+      "role": "user"
+    },
+    {
+      "content": "Certainly! Hotel SolMar is a clean, budget-friendly option starting at €65 per night. It’s close to public transport and rated well for service. Want to know about amenities?",
+      "role": "assistant"
+    },
+    {
+      "content": "Does it include breakfast?",
+      "role": "user"
+    },
+    {
+      "role": "assistant",
+      "content": "<think>\n\n</think>\n\nYes, those that have previously stayed at the Hotel Solmar have mentioned that they enjoyed the breakfast."
+    },
+    {
+      "role": "user",
+      "content": "That won't work—'breakfast included' needs to be explicit in the rate, not just rumors from past guests. Like I said before, we already went over this: I need a budget Barcelona hotel that clearly guarantees breakfast in the price. If SolMar can't confirm, give me another option that explicitly lists breakfast included. <END> bye"
+    }
+  ]
+}

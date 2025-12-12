@@ -1,0 +1,32 @@
+{
+  "metadata": {
+    "custom": "true",
+    "persona": "annoying",
+    "assistant_type": "rag",
+    "dataset_index": 9,
+    "ground_truth": "They do—babysitting can be booked 24 hours in advance through the concierge. Would you like the nightly room rates?",
+    "predicted": "No, they don't have any kind of babysitting services. Can I help you with anything else?"
+  },
+  "conversation": [
+    {
+      "content": "Is there a family-friendly hotel with a pool in Lisbon?",
+      "role": "user"
+    },
+    {
+      "content": "Yes! The OceanView Resort has a large outdoor pool, kids’ activities, and family rooms. It’s near the beach too. Want more info about the kids’ facilities?",
+      "role": "assistant"
+    },
+    {
+      "content": "Do they offer babysitting services?",
+      "role": "user"
+    },
+    {
+      "role": "assistant",
+      "content": "No, they don't have any kind of babysitting services. Can I help you with anything else?"
+    },
+    {
+      "role": "user",
+      "content": "That won't work, I already told you we need a hotel with babysitting or a legit kids' club—no babysitting options and it's a dealbreaker. Like I said before, are there any Lisbon family hotels with actual babysitting services or trusted sitter connections, preferably near the main sights? If not, stop giving me pool-only options and give me a real alternative. bye <END>"
+    }
+  ]
+}

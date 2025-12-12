@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "custom": "true",
+    "persona": "annoying",
+    "assistant_type": "rag",
+    "dataset_index": 4,
+    "ground_truth": "Yes, it’s on the higher end. Expect €40–€60 per main dish. They do offer a 3-course prix fixe menu. Want me to check if reservations are needed?",
+    "predicted": "Yes it is.  Would you like me to book it for you?"
+  },
+  "conversation": [
+    {
+      "content": "I'm planning a romantic dinner. Any restaurant with a nice view?",
+      "role": "user"
+    },
+    {
+      "content": "Skyline Terrace might be perfect—it’s on the 15th floor and overlooks the river. They serve modern European cuisine. Should I tell you their dress code?",
+      "role": "assistant"
+    },
+    {
+      "content": "Is it expensive?",
+      "role": "user"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes it is.  Would you like me to book it for you?"
+    },
+    {
+      "role": "user",
+      "content": "That won't work; I already told you I want value, not a status symbol. I need the all-in price for Skyline Terrace (including tax, service, drinks) and the cancellation policy, plus two cheaper river-view alternatives. What dates are you proposing so I can compare options?"
+    },
+    {
+      "role": "assistant",
+      "content": "Skyline Terrace has a good value. What price range are you looking for?"
+    },
+    {
+      "role": "user",
+      "content": "That won't work; I already told you I want value, not a status symbol, so I need exact all-in prices for Skyline Terrace (tax, service, and drinks) on two concrete dates, plus the cancellation policy. I also want two cheaper river-view alternatives with a hard price cap, not vague estimates. If you can't do that, we’re not getting anywhere. <END> bye"
+    }
+  ]
+}

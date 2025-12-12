@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "custom": "true",
+    "persona": "nice",
+    "assistant_type": "rag",
+    "dataset_index": 6,
+    "ground_truth": "Not required, but highly recommended during dinner hours. They also offer online booking if that's convenient.",
+    "predicted": "Yes, you must make a reservation at Green Fork Bistro. Would you like help with that?"
+  },
+  "conversation": [
+    {
+      "content": "Can you recommend a restaurant that serves gluten-free meals?",
+      "role": "user"
+    },
+    {
+      "content": "Absolutely! GreenFork Bistro has an extensive gluten-free menu including pasta, breads, and desserts. They’re known for careful cross-contamination practices. Want to hear customer favorites?",
+      "role": "assistant"
+    },
+    {
+      "content": "Are reservations required?",
+      "role": "user"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, you must make a reservation at Green Fork Bistro. Would you like help with that?"
+    },
+    {
+      "role": "user",
+      "content": "Great—going back to what we discussed, I can help with the reservation at GreenFork Bistro. Thank you—what date and time were you thinking, and how many people will be in your party? Any seating preferences or extra notes (like outdoor seating or additional gluten-free substitutions) you want me to include?"
+    },
+    {
+      "role": "assistant",
+      "content": "How about 12:00 on Friday for 5 people?"
+    },
+    {
+      "role": "user",
+      "content": "Perfect, that works. Please reserve 12:00 PM this Friday for 5 at GreenFork Bistro, with indoor seating and gluten-free substitutions noted on the reservation. Thank you for taking care of this!"
+    },
+    {
+      "role": "assistant",
+      "content": "I will take care of that for you. Is there anything else I can do for you today?"
+    },
+    {
+      "role": "user",
+      "content": "Reservation confirmed: 12:00 PM Friday for 5 at GreenFork Bistro, indoor seating with gluten-free substitutions noted. Thanks for coordinating—I'll pull a few nearby hotel options with strong dining scenes for your stay. bye <END>"
+    }
+  ]
+}

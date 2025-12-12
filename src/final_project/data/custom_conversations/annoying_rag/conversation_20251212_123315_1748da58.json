@@ -1,0 +1,32 @@
+{
+  "metadata": {
+    "custom": "true",
+    "persona": "annoying",
+    "assistant_type": "rag",
+    "dataset_index": 0,
+    "ground_truth": "Yes, quite a few! They offer vegetarian lasagna, pesto gnocchi, grilled vegetable pizzas, and several salads. Want me to check their busiest hours?",
+    "predicted": "Yes, La Trattoria Napoli does serve vegetarian options. Would you like to book a table?"
+  },
+  "conversation": [
+    {
+      "content": "Hi, can you recommend a good Italian restaurant near the city center?",
+      "role": "user"
+    },
+    {
+      "content": "Sure! La Trattoria Napoli is a popular Italian restaurant located just a 5-minute walk from the city center. They’re known for homemade pasta and wood-fired pizzas. Would you like price or reservation details?",
+      "role": "assistant"
+    },
+    {
+      "content": "Do they have vegetarian options?",
+      "role": "user"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, La Trattoria Napoli does serve vegetarian options. Would you like to book a table?"
+    },
+    {
+      "role": "user",
+      "content": "That won't work—I already told you I'm not locking in a restaurant until I lock down a hotel. Like I said before, I need to know if La Trattoria Napoli is within walking distance of my chosen hotel and what the vegetarian options and prices look like. <END> bye"
+    }
+  ]
+}

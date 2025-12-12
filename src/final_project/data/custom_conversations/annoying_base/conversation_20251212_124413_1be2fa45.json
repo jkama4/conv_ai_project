@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "custom": "true",
+    "persona": "annoying",
+    "assistant_type": "base",
+    "dataset_index": 8,
+    "ground_truth": "Mains range from €25–€45 depending on the cut. They also offer a weekday lunch special if you're looking for something more affordable.",
+    "predicted": "<think>\n\n</think>\n\nI'm not sure how much it is but it does have a good atmosphere. Would you like me to find a place that has a better price?"
+  },
+  "conversation": [
+    {
+      "content": "Where can I find a steakhouse with outdoor seating?",
+      "role": "user"
+    },
+    {
+      "content": "Prime Grill has a heated outdoor terrace and serves high-quality steaks and wine. It's great for evening dining. Want to know typical wait times?",
+      "role": "assistant"
+    },
+    {
+      "content": "How pricey is it?",
+      "role": "user"
+    },
+    {
+      "role": "assistant",
+      "content": "<think>\n\n</think>\n\nI'm not sure how much it is but it does have a good atmosphere. Would you like me to find a place that has a better price?"
+    },
+    {
+      "role": "user",
+      "content": "That won't work—I asked for real price ranges, not vibes. I already told you I want mains around $30–$50 with outdoor seating. Like I said before, what's your preferred neighborhood and budget so we can skip the pricey Prime Grill-type spots and find something actually affordable?"
+    },
+    {
+      "role": "assistant",
+      "content": "I'm sorry, but I can't find any restaurants that fit your criteria.  Would you like to try a different type of food?"
+    },
+    {
+      "role": "user",
+      "content": "That won't work; I already told you I need mains around $30–$50 with outdoor seating. Like I said before, we still need the city and dates to pull real options—your “affordable” vibes don’t help. Which city and neighborhood are you in, and when are you traveling—on-site hotel restaurants with patios or nearby hotel lounges with outdoor seating in that price range?"
+    },
+    {
+      "role": "assistant",
+      "content": "I'm sorry, but I'm not finding anything matching your request. Is there another type of food you'd like me to search for?"
+    },
+    {
+      "role": "user",
+      "content": "That won't work; I already told you I need mains around $30–$50 with outdoor seating, and you still won't pull real options. Like I said before, we need the city and dates to pull anything usable—without that, you're just talking in circles. bye <END>"
+    }
+  ]
+}

@@ -49,11 +49,16 @@ def get_history(
 def save_conversation(
     history: List[Dict],
     subject_dir: str,
-    metadata: Dict | None =None
+    metadata: Dict | None = None,
+    custom: bool = False,
 ) -> str:
     
     print("SAVING conversation ...")
-    base_dir = Path(__file__).resolve().parent / "data" / "conversations"
+
+    if custom:
+        base_dir = Path(__file__).resolve().parent / "data" / "custom_conversations"
+    else:
+        base_dir = Path(__file__).resolve().parent / "data" / "conversations"
 
     folder = base_dir / subject_dir
     folder.mkdir(parents=True, exist_ok=True)
@@ -75,3 +80,69 @@ def save_conversation(
     print("SAVED!")
 
     return str(file_path)
+
+
+def get_conversations(
+    custom: bool = False
+) -> Dict:
+    
+    if custom:
+        path: Path = Path(__file__).parent / "data" / "custom_conversations"
+    else:
+        path: Path = Path(__file__).parent / "data" / "conversations"
+    
+    conv_dirs: List[Path] = [x for x in path.iterdir() if x.is_dir()]
+
+    conversations: List[Dict] = []
+
+    for dir in conv_dirs:
+        for data_file in dir.iterdir():
+            if data_file.is_file() and ".json" in str(data_file.name):
+
+                with open(data_file, "r") as f:
+                    data = json.load(f)
+
+                conversations.append(data)
+
+    return conversations
+
+
+def tensor_to_python(obj):
+    if isinstance(obj, torch.Tensor):
+        return obj.item()
+    return obj
+
+
+def save_evaluations(
+    evaluated_conversations: List[Dict],
+    custom: bool = False
+) -> None:
+
+    save_path: Path = Path(__file__).parent / "data" / "evaluated_conversations"
+    
+    if custom:
+        save_file: Path = f"{save_path}/custom_evaluated.json"
+    else:
+        save_file: Path = f"{save_path}/evaluated.json"
+
+    with open(save_file, "w") as f:
+        json.dump(evaluated_conversations, f, default=tensor_to_python)
+    
+    return None
+
+
+def get_evaluated_conversations(
+    custom: bool = False
+) -> List[Dict]:
+
+    eval_path: Path = Path(__file__).parent / "data" / "evaluated_conversations"
+
+    if custom:
+        file_path: Path = f"{eval_path}/custom_evaluated.json"
+    else:
+        file_path: Path = f"{eval_path}/evaluated.json"
+
+    with open(file_path, "r") as f:
+        data = json.load(f)
+
+    return data

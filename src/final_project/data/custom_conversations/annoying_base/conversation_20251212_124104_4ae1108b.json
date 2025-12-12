@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "custom": "true",
+    "persona": "annoying",
+    "assistant_type": "base",
+    "dataset_index": 2,
+    "ground_truth": "Their Dragon Roll is the top favorite—tempura shrimp, avocado, and unagi sauce. Want the estimated delivery time for your area?",
+    "predicted": "<think>\n\n</think>\n\nSakura Bento offers a variety of rolls and their best one is the Royal Maki. Would you like to know more about them?"
+  },
+  "conversation": [
+    {
+      "content": "Is there a sushi restaurant that offers delivery near me?",
+      "role": "user"
+    },
+    {
+      "content": "Sakura Bento offers delivery within most neighborhoods and has great reviews for freshness. They deliver until 10 PM. Would you like to know their most popular dishes?",
+      "role": "assistant"
+    },
+    {
+      "content": "Yes, what's their most recommended roll?",
+      "role": "user"
+    },
+    {
+      "role": "assistant",
+      "content": "<think>\n\n</think>\n\nSakura Bento offers a variety of rolls and their best one is the Royal Maki. Would you like to know more about them?"
+    },
+    {
+      "role": "user",
+      "content": "That won't work—I already told you I want real options, not just one \"best\" roll. Like I said before, does Sakura Bento actually deliver to my hotel on time, or is the delivery radius a myth? If not, give me two nearby sushi spots with reliable delivery and better freshness ratings."
+    },
+    {
+      "role": "assistant",
+      "content": "Deliveries are available for sakura bento. What other restaurants are available to you?"
+    },
+    {
+      "role": "user",
+      "content": "That won't work—I already told you I want two nearby sushi spots with reliable delivery and better freshness ratings, not another generic confirmation. We already went over this—what are the two concrete options near my hotel, with delivery windows and any freshness scores you can cite? If you can't name them, say so and I'll find them myself. <END>"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "custom": "true",
+    "persona": "annoying",
+    "assistant_type": "base",
+    "dataset_index": 7,
+    "ground_truth": "Yes, the shuttle runs 24/7. Late-night pickups are on demand, so you just call when you land. Need help finding alternative airport hotels?",
+    "predicted": "<think>\n\n</think>\n\nThe Airport Inn Express does not run late at night. The shuttle service operates from 5:00 am to 7:45 pm."
+  },
+  "conversation": [
+    {
+      "content": "I need a hotel near the airport with a shuttle service.",
+      "role": "user"
+    },
+    {
+      "content": "Airport Inn Express offers a free shuttle every 30 minutes. Rooms start at $110 per night and include breakfast. Would you like to know shuttle operating hours?",
+      "role": "assistant"
+    },
+    {
+      "content": "Does it run late at night?",
+      "role": "user"
+    },
+    {
+      "role": "assistant",
+      "content": "<think>\n\n</think>\n\nThe Airport Inn Express does not run late at night. The shuttle service operates from 5:00 am to 7:45 pm."
+    },
+    {
+      "role": "user",
+      "content": "That won't work, I told you I need a late-night shuttle or 24-hour option. Like I said before, are there any airport hotels with 24-hour shuttle service or at least until 11pm? If not, can you arrange a guaranteed taxi or transfer instead?"
+    },
+    {
+      "role": "assistant",
+      "content": "The hotel does not have a 24-hour shuttle service, but we can arrange a taxi for you. Do you want to stay at the hotel?"
+    },
+    {
+      "role": "user",
+      "content": "That won't work, I already told you I need a guaranteed late-night shuttle or 24/7 option, not a fallback taxi. If you can’t confirm a hotel with that service, you’re not listening and I’m done with this search. <END> bye"
+    }
+  ]
+}

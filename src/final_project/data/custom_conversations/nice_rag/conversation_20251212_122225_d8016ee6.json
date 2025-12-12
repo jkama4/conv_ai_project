@@ -1,0 +1,32 @@
+{
+  "metadata": {
+    "custom": "true",
+    "persona": "nice",
+    "assistant_type": "rag",
+    "dataset_index": 5,
+    "ground_truth": "They charge a flat €25 pet fee per stay, not per night. I can also check their availability if you share travel dates.",
+    "predicted": "They charge a fee of 15 GBP per day for a pet. Do you have any other questions?"
+  },
+  "conversation": [
+    {
+      "content": "Are there any pet-friendly hotels in Vienna?",
+      "role": "user"
+    },
+    {
+      "content": "Yes! The Mozart Suites allow pets of all sizes and even provide pet beds on request. There's a small cleaning fee. Want to know nearby parks?",
+      "role": "assistant"
+    },
+    {
+      "content": "Do they charge extra per night for pets?",
+      "role": "user"
+    },
+    {
+      "role": "assistant",
+      "content": "They charge a fee of 15 GBP per day for a pet. Do you have any other questions?"
+    },
+    {
+      "role": "user",
+      "content": "That's helpful to know about the pet fee. I'll look into nearby pet-friendly dining with patios around Mozart Suites. Thanks again, bye <END>"
+    }
+  ]
+}

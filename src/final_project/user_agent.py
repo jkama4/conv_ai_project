@@ -15,6 +15,14 @@ class UserAgent:
         self.persona = persona
 
     def _call(self: Self, history: List[Dict]):
+        """
+        Calls the user agent and returns its response
+        
+        :(param) history: the history of the conversation so far
+        :type history: List[Dict]
+        :return: returns the generated response by the user agent (traveler)
+        :rtype: str
+        """
         
         response = OPENAI_CLIENT.responses.create(
             model="gpt-5-nano",

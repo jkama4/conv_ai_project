@@ -1,8 +1,6 @@
 from transformers import AutoTokenizer, AutoModelForCausalLM
-from peft import LoraConfig, get_peft_model, PeftModel, PeftMixedModel
+from peft import LoraConfig, get_peft_model, PeftModel
 from trl import SFTTrainer, SFTConfig
-
-from pathlib import Path
 
 from datasets import Dataset
 
@@ -13,8 +11,12 @@ from . import utils, config
 
 @dataclass
 class AssistantAgentConfig:
+    """
+    Configuration of the Assistant Agent
+    """
+
     qwen_model: str = "Qwen/Qwen3-1.7B"
-    r: int = 16
+    r: int = 16 # rank of the low rank matrices (LoRA)
     lora_alpha: int = 32
     lora_dropout: float = 0.05
     bias: str = "none"
@@ -25,9 +27,19 @@ class AssistantAgentConfig:
     )
 
     def _load_tokenizer(self: Self) -> AutoTokenizer:
+        """
+        Docstring for _load_tokenizer
+        
+        :return: existing tokenizer
+        """
         return AutoTokenizer.from_pretrained(self.qwen_model, use_fast=True)
     
     def _setup_peft_model(self: Self) -> PeftModel:
+        """
+        Docstring for _setup_peft_model
+
+        :return: PEFT model
+        """
         base = AutoModelForCausalLM.from_pretrained(
             self.qwen_model,
             dtype="auto",
@@ -46,6 +58,13 @@ class AssistantAgentConfig:
         return get_peft_model(base, peft_cfg)
     
     def _load_sft_config(self: Self):
+        """
+        Sets up the configuration for supervised fine-tuning (SFT)
+        
+        :return: configuration for SFT
+        :rtype: SFTConfig
+        """
+
         return SFTConfig(
             output_dir="outputs",
             per_device_train_batch_size=2,
@@ -73,6 +92,12 @@ class AssistantAgentConfig:
         train_ds: Dataset,
         eval_ds: Dataset | None = None,
     ) -> SFTTrainer:
+        """
+        Docstring for _load_trainer
+        
+        :return: returns the SFT trainer
+        :rtype: SFTTrainer
+        """
         
         args: SFTConfig = self._load_sft_config()
 

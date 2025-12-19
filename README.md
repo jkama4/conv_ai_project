@@ -1,3 +1,12 @@
+Main Research Question:
+What is the differential effect of lexical-based keyword knowledge base access on the conversational assistant agent's performance and generalization across in-domain (DSTC11-track5) and out-of-domain travel assistance scenarios, as measured by objective and subjective evaluation metrics?
+
+Sub-Research Question 1:
+To what extent do the assistant agent's objective (BLEU, ROUGE, BERTScore) and subjective (task success, coherence) evaluation scores degrade when shifting from the in-domain DSTC11-track5 dataset to custom out-of-domain conversation histories, and is this degradation moderated by the presence of the knowledge base?
+
+Sub-Research Question 2:
+How does the user agent's behavior (annoying vs. nice) influence the assistant agent's subjective performance scores (pleasantness, coherence, and task success)?
+
 # Environment Setup
 
 Before setting up, make sure Python 3.13 is installed. You also need a C++ compiler. To set that up, follow the final section.

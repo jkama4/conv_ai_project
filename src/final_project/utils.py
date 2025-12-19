@@ -10,6 +10,9 @@ from typing import List, Dict
 from .data_sets import setup_repo
 
 def pick_bf16():
+    """
+    Uses bf16 if available
+    """
     if torch.cuda.is_available():
         major, _ = torch.cuda.get_device_capability()
         return major >= 8
@@ -22,6 +25,13 @@ def get_knowledge_base(
         repo_name="dstc11-track5",
     )
 ) -> Dict:
+    """
+    Retrieves the information from the knowledge base
+    
+    :(param) data_path: path to the data source
+    :return: returns the knowledge base
+    :rtype: Dict
+    """
     
     with open(data_path / "knowledge.json", "r") as f:
         knowledge_base=json.load(f)
@@ -33,6 +43,15 @@ def get_history(
     ds: Dataset,
     n: int,
 ) -> Dict:
+    """
+    Retrieves and formats the history of a conversation
+    
+    :(param) ds: the dataset that contains the histories
+    :(param) n: the number of messages 
+    :type n: int
+    :return: Description
+    :rtype: Dict
+    """
     
     history: List[Dict] = []
 
@@ -52,6 +71,16 @@ def save_conversation(
     metadata: Dict | None = None,
     custom: bool = False,
 ) -> str:
+    """
+    Stores the conversation when finished
+
+    :(param) history: the conversation (or simply, a history) that is being stored
+    :(param) subject_dir: the directory of the corresponding source (custom or DSTC11-track5)
+    :(param) metadata: if provided, metadata will be stored (often measured metrics)
+    :(param) custom: determines whether to gather conversations from the custom or DSTC11-track5 dataset
+    :return: file_path to the stored conversation
+    :rtype: Path
+    """
     
     print("SAVING conversation ...")
 
@@ -85,6 +114,11 @@ def save_conversation(
 def get_conversations(
     custom: bool = False
 ) -> Dict:
+    """
+    Gather the conversations
+
+    :(param) custom: determines whether to gather conversations from the custom or DSTC11-track5 dataset
+    """
     
     if custom:
         path: Path = Path(__file__).parent / "data" / "custom_conversations"

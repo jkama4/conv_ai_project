@@ -8,12 +8,19 @@ from pathlib import Path
 
 
 def format_dialogue(dialogue: List[Dict]) -> List[Dict]:
+    """
+    Formats a given dialogue in the expected format for the agent
+
+    :(param) dialogue: a dialogue (history)
+    :return: the set of formatted messages
+    :rtype: List[Dict]
+    """
     messages = []
 
     for turn in dialogue:
-        if turn["speaker"] == "U":
+        if turn["speaker"] == "U": # U is converted to "user"
             messages.append({"role": "user", "content": turn["text"]})
-        elif turn["speaker"] == "S":
+        elif turn["speaker"] == "S": # S is converted to "assistant"
             messages.append({"role": "assistant", "content": turn["text"]})
         else:
             raise ValueError("Unknown speaker type")
@@ -23,6 +30,12 @@ def format_dialogue(dialogue: List[Dict]) -> List[Dict]:
 
 
 def reformat_dataset(dataset, labels_dataset):
+    """
+    Reformats a complete dataset
+    
+    :(param) dataset: the dataset which will be formatted
+    :(param) labels_dataset: the labels that correspond to the dataset
+    """
     reformatted_dataset = {"messages": []}
 
     for i in range(len(dataset)):
@@ -46,6 +59,15 @@ def setup_repo(
     repo_name: str,
     work_dir: Path | None = None,
 ) -> Path:
+    """
+    Sets up the dataset repository, if it isn;'t setup yet
+    
+    :(param) repo_url: URL to the repository of th e dataset
+    :(param) repo_name: name of the repository
+    :(param) work_dir: the working directory
+    :return: returns the directory where the data is stored
+    :rtype: Path
+    """
 
     if work_dir is None:
         work_dir = Path(__file__).parent / "data"
@@ -73,6 +95,13 @@ def create_datasets(
         repo_name="dstc11-track5",
     ),
 ) -> Tuple[Dataset]:
+    """
+    Sets up all different datasets (train, test, val)
+    
+    :(param) data_path: path to the data sources directory
+    :return: returns the datasets from
+    :rtype: Tuple[Dataset]
+    """
 
     with open(data_path / "train/logs.json", "r") as f:
         train_ds = json.load(f)
@@ -110,6 +139,12 @@ def setup_datasets() -> Tuple[Dataset]:
     )
 
 def get_custom_dataset() -> Dataset:
+    """
+    Retrieves the custom dataset
+    
+    :return: custom dataset
+    :rtype: Dataset
+    """
 
     file_path: Path = Path(__file__).parent / "data" / "custom_histories.json"
 

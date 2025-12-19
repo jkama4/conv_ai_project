@@ -118,6 +118,8 @@ def get_conversations(
     Gather the conversations
 
     :(param) custom: determines whether to gather conversations from the custom or DSTC11-track5 dataset
+    :return: returns the conversations
+    :rtype: List[Dict]
     """
     
     if custom:
@@ -131,6 +133,7 @@ def get_conversations(
 
     for dir in conv_dirs:
         for data_file in dir.iterdir():
+            # checks whether the file is actually a json file
             if data_file.is_file() and ".json" in str(data_file.name):
 
                 with open(data_file, "r") as f:
@@ -142,6 +145,13 @@ def get_conversations(
 
 
 def tensor_to_python(obj):
+    """
+    Converts a tensor to a json-interpretable object
+    
+    :(param) obj: a tensor
+    :return: returns the tensor as interpretable object
+    :rtype: Any
+    """
     if isinstance(obj, torch.Tensor):
         return obj.item()
     return obj
@@ -151,6 +161,12 @@ def save_evaluations(
     evaluated_conversations: List[Dict],
     custom: bool = False
 ) -> None:
+    """
+    Saves an evaluated conversation, where the conversations now include metadata about their scores
+    
+    :(param) evaluated_conversations: conversations that include metadata about their scores
+    :(param) custom: determines whether the evaluation is custom or from the DSTC11-track5 dataset
+    """
 
     save_path: Path = Path(__file__).parent / "data" / "evaluated_conversations"
     
@@ -168,6 +184,13 @@ def save_evaluations(
 def get_evaluated_conversations(
     custom: bool = False
 ) -> List[Dict]:
+    """
+    Retrieve the evaluated conversations
+    
+    :(param) custom: determines whether the evaluation is custom or from the DSTC11-track5 dataset
+    :return: returns the evaluated conversation from the data source
+    :rtype: List[Dict]
+    """
 
     eval_path: Path = Path(__file__).parent / "data" / "evaluated_conversations"
 

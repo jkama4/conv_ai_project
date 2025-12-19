@@ -15,6 +15,13 @@ from .pd_models import LLMAsJudgeFormat
 def gather_objective_data(
     convo_data: Dict
 ) -> Dict:
+    """
+    Gathers all objective data
+    
+    :(param) convo_data: the data of the conversation
+    :return: returns a dictionary of the conversation data, combined with the metadata on evaluation
+    :rtype: Dict
+    """
         
     convo: List[Dict] = convo_data["conversation"]
 
@@ -52,6 +59,15 @@ def compute_bleu(
     pred: str,
     ref: str,
 ) -> float:
+    """
+    Computes the BLEU score for a predicted sentence (by the assistant agent)
+    
+    :(param) pred: the predicted sentence
+    :(param) ref: the reference sentence (original sentence from database)
+    :return: returns the BLEU score
+    :rtype: float
+    """
+
     bleu_scorer: BLEU = BLEU(effective_order=True)
 
     score = bleu_scorer.sentence_score(
@@ -66,6 +82,15 @@ def compute_rouge(
     pred: str,
     ref: str,
 ) -> float:
+    """
+    Computes the ROUGE score for a predicted sentence (by the assistant agent)
+    
+    :(param) pred: the predicted sentence
+    :(param) ref: the reference sentence (original sentence from database)
+    :return: returns the ROUGE score
+    :rtype: float
+    """   
+
     rouge_scorer = Rouge()
 
     score = rouge_scorer.get_scores(
@@ -80,6 +105,14 @@ def compute_bertscore(
     pred: str,
     ref: str,
 ) -> float:
+    """
+    Computes the BERSTScore for a predicted sentence (by the assistant agent)
+    
+    :(param) pred: the predicted sentence
+    :(param) ref: the reference sentence (original sentence from database)
+    :return: returns the BERTScore
+    :rtype: float
+    """
     
     bertscore = BERTScore()
 
@@ -103,6 +136,13 @@ def eval_answers(
 def calc_tokens(
     completion: List[Dict]
 ) -> Tuple[int, int]:
+    """
+    Calculates the number of tokens used by each agent in a conversation
+    
+    :(param) completion: the history, including the 'completion' (the generated conversation after the initial history)
+    :return: Description
+    :rtype: Tuple[int, int]
+    """
     
     assistant_texts, user_texts = [], []
 
@@ -121,12 +161,24 @@ def calc_tokens(
 def gather_subjective_data(
     convo_data: Dict
 ) -> Dict:
+    """
+    Gathers all objective data
+    
+    :(param) convo_data: the data of the conversation
+    :return: returns a dictionary of the conversation data, combined with the metadata on evaluation
+    :rtype: Dict
+    """
     
     convo: List[Dict] = convo_data["conversation"]
     pred_sentence: str = convo_data["metadata"]["predicted"]
     gt_sentence: str = convo_data["metadata"]["ground_truth"]
     
     client: OpenAI = OpenAI(api_key=os.getenv("OPENAI_API_KEY", ""))
+
+    # The LLM also acts as a judge, and provides a prediction score, 
+    # which evaluates the quality of the assistant agent's predicted 
+    # output, compared to the ground-truth (only the final sentence
+    # of the original history at the very beginning before any completions)
     response = client.responses.parse(
         model="gpt-5-nano",
         input=[

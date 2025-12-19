@@ -146,7 +146,7 @@ class RAGAssistantAgent(BaseAssistantAgent):
 
     def _format_matches(self: Self, matches: List) -> str:
         """
-        Docstring for _format_matches
+        Formats the matches found in the knowledge base accordingly
 
         :(param) matches: list of reviews that relate to the content
         :return: returns a formatted version of the matches found

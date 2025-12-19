@@ -2,6 +2,8 @@
 
 Before setting up, make sure Python 3.13 is installed. You'll also need an OpenAI API key, which you should add in your .env (see .env.example).
 
+All code for the final report was ran in notebook.ipynb, which can be found in the src folder.
+
 ## No Virtual env (pip)
 If you don't Poetry to manage dependencies, you can simply use the following command
 

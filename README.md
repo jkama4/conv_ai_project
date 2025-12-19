@@ -1,6 +1,6 @@
 # Environment Setup
 
-Before setting up, make sure Python 3.13 is installed. 
+Before setting up, make sure Python 3.13 is installed. You'll also need an OpenAI API key, which you should add on your .env (see .env.example).
 
 ## No Virtual env (pip)
 If you don't Poetry to manage dependencies, you can simply use the following command
